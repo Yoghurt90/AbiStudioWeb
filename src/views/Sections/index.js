@@ -1,0 +1,9 @@
+export { default as Prices } from "./Prices";
+export { default as ClipPrices } from "./Prices";
+export { default as EventPrices } from "./Prices";
+export { default as ContactUs } from "./ContactUs";
+export { default as Contacts } from "./Contacts";
+export { default as AboutUs } from "./AboutUs";
+export { default as MyWork } from "./MyWork";
+export { default as Gallery } from "./Gallery";
+export { default as Clients } from "./Clients";
