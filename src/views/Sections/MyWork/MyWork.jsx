@@ -7,10 +7,13 @@ import SectionHeader from "components/SectionHeader";
 import PageSection from "components/PageSection";
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
+import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
 import Image from "components/Image";
+import { Link } from "gatsby"
 
 const useStyles = makeStyles({
   root: {
@@ -35,6 +38,12 @@ const useStyles = makeStyles({
   media: {
     height: 140,
   },
+  cardLink: {
+    color: "black",
+  },
+  cardActions: {
+    justifyContent: "center",
+  }
 });
 
 const MyWork = ({ className, frontmatter }) => {
@@ -55,22 +64,27 @@ const MyWork = ({ className, frontmatter }) => {
       </Row>
       <Row className="text-center">
         <Grid container spacing={3}>
-          {services.map(({ imageFileName, header, content }) => (
+          {services.map(({ imageFileName, header, content, serviceActionHref, serviceActionName }) => (
             <Grid item xs key={header}>
               <Card className={classes.root} variant="outlined">
-                  <CardContent>
-                    <Image
-                      className="img-fluid"
-                      fileName={imageFileName}
-                      alt={header}
-                    />
-                    <Typography className={classes.title} gutterBottom variant="caption" component="h2">
-                      {header}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" component="p">
-                      {content}
-                    </Typography>
-                  </CardContent>
+                <CardContent>
+                  <Image
+                    className="img-fluid"
+                    fileName={imageFileName}
+                    alt={header}
+                  />
+                  <Typography className={classes.title} gutterBottom variant="caption" component="h2">
+                    {header}
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" component="p">
+                    {content}
+                  </Typography>
+                </CardContent>
+                <CardActions className={classes.cardActions}>
+                  <Button variant="outlined">
+                    <Link to={serviceActionHref} className={classes.cardLink}>{serviceActionName}</Link>
+                  </Button>
+                </CardActions>
               </Card>
             </Grid>
           ))}

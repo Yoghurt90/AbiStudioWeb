@@ -1,55 +1,47 @@
 ---
 anchor: "#Rolunk"
-header: "Rolunk"
-subheader: "Ezt rajzoltad, ezt csinaltam"
-portfolios: [
+sections: [
   {
-    imageFileName: "portfolio/01-thumbnail.jpg",
-    imageFileNameDetail: "portfolio/01-full.jpg",
-    header: "Threads",
-    subheader: "Illustration",
-    content: "Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
-    extraInfo: ["Date: January 2017", "Client: Threads", "Category: Illustration"]
+    header: "Rolunk",
+    subheader: "",
+    contentImageFileName: "misi.jpg",
+    content: "Pusko Miály vagyok az ABI studio alapítója, 2011 óta foglalkozom filmkészítéssel. Az esküvők
+világába 2016ban csöppentem bele, azóta pedig szerelemmé vált. Szenvedélyem a filmkészítés,
+szeretek történeteket elmesélni és imádom kihasználni a film adta lehetőségeket. A letisztult
+esztétikában hiszek, nem a közhelyes, effektekkel teletűzdelt filmekben. Szerintem úgy lehet a
+legőszintébb filmet, érzéseket átadni ha ezt teljesen észrevétlenül készítjük, épp ezért csendben
+és szinte észrevétlenül dolgozunk a háttérben.",
+    teamMember: [
+      {
+        imageFileName: "team/mate.jpg",
+        header: "Szakos Máté",
+        subheader: "Operatőr",
+        social: {
+          facebook: "szakos.mate"
+        }
+      },
+      {
+        imageFileName: "team/istvan.jpg",
+        header: "Farkas István",
+        subheader: "Fotós, Operatőr",
+        social: {
+          facebook: "istvan.farkas.180"
+        }
+      },
+      {
+        imageFileName: "team/dani.jpg",
+        header: "Breznanik R. Dániel",
+        subheader: "Vágó, Grafikus",
+        social: {
+          facebook: "100009459593242"
+        }
+      },
+    ]
   },
   {
-    imageFileName: "portfolio/02-thumbnail.jpg",
-    imageFileNameDetail: "portfolio/02-full.jpg",
-    header: "Explorer",
-    subheader: "Graphic Design",
-    content: "Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
-    extraInfo: ["Date: January 2017", "Client: Explorer", "Category: Graphic Design"]
-  },
-  {
-    imageFileName: "portfolio/03-thumbnail.jpg",
-    imageFileNameDetail: "portfolio/03-full.jpg",
-    header: "Finish",
-    subheader: "Identity",
-    content: "Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
-    extraInfo: ["Date: January 2017", "Client: Finish", "Category: Identity"]
-  },
-  {
-    imageFileName: "portfolio/04-thumbnail.jpg",
-    imageFileNameDetail: "portfolio/04-full.jpg",
-    header: "Lines",
-    subheader: "Branding",
-    content: "Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
-    extraInfo: ["Date: January 2017", "Client: Lines", "Category: Branding"]
-  },
-  {
-    imageFileName: "portfolio/05-thumbnail.jpg",
-    imageFileNameDetail: "portfolio/05-full.jpg",
-    header: "Southwest",
-    subheader: "Website Design",
-    content: "Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
-    extraInfo: ["Date: January 2017", "Client: Southwest", "Category: Website Design"]
-  },
-  {
-    imageFileName: "portfolio/06-thumbnail.jpg",
-    imageFileNameDetail: "portfolio/06-full.jpg",
-    header: "Window",
-    subheader: "Photography",
-    content: "Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!",
-    extraInfo: ["Date: January 2017", "Client: Window", "Category: Photography"]
+    header: "Cinematográfia",
+    subheader: "modern esküvői videó",
+    content: "Az esküvői cinematográfia teljesen eltér a régi esküvői videó stílustól. Sokkal inkább az érzelmekre helyezi a hangsúlyt. Célunk a nap legfontosabb pillanatait megörökíteni, amiben egy-egy elkapott érzelmes pillanat sokkal többet ad vissza, mint egy hosszú vágatlan videó. Végül ezekből a felvételekből válogatjuk ki az esküvőtökön készült legjobb pillanatokat, beszédeket, amiből egy mozifilm élményű filmet készítünk. DSLR/MILC Gépeket használunk, amely látványvilágában egy mozifilmhez hasonlítható. Az általunk használt különböző speciális kameramozgatók pedig csak tovább fokozzák ezt az élményt."
   }
 ]
 ---

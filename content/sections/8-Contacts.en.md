@@ -24,21 +24,21 @@ contactsHeader: "Kapcsolat"
 contacts: [
     {
         contactIcon: "PHONE",
-        contactText: "+36......"
+        contactText: "+36 30 798 8687"
     },
     {
         contactIcon: "MAIL",
-        contactText: "ABI......"
+        contactText: "mihalypusko@gmail.com"
     },
     {
         contactIcon: "FB",
-        contactText: "ABI......",
-        contactUserName: "mikuku.misi"
+        contactText: "Abi studio",
+        contactUserName: "ABIweddings"
     },
     {
         contactIcon: "INSTA",
-        contactText: "ABI......",
-        contactUserName: "iam_mikuku"
+        contactText: "ABI STUDIO.",
+        contactUserName: "the_abi_studio"
     }
 ]
 ---

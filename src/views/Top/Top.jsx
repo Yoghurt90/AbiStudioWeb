@@ -4,7 +4,6 @@ import PropTypes from "prop-types";
 import { Button } from "react-bootstrap";
 import useSmoothScrollTo from "hooks/useSmoothScrollTo";
 import ImageCard from "components/ImageCard";
-import sdmp4 from "content/assets/videos/sd.mp4";
 
 const Top = ({ frontmatter }) => {
   if (!frontmatter) {
@@ -25,17 +24,12 @@ const Top = ({ frontmatter }) => {
   }
 
   return (
-    /* eslint-disable */
-    <video autoPlay={true} loop={true} muted={true} width={"100%"}>
-      <source src={sdmp4} type="video/mp4" />
-    </video>
-    /* eslint-enable */
-    // <ImageCard
-    //   imageFileName={imageFileName}
-    //   header={header}
-    //   subheader={subheader}
-    //   extraInfo={extraInfoPart}
-    // />
+    <ImageCard
+      imageFileName={imageFileName}
+      header={header}
+      subheader={subheader}
+      extraInfo={extraInfoPart}
+    />
   );
 };
 

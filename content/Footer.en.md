@@ -1,9 +1,8 @@
 ---
-copyright: "Copyright © Start Bootstrap 2020"
+copyright: "Copyright © ABI Studio 2020"
 social: {
-  twitter: "#",
-  facebook: "#",
-  medium: "#"
+  facebook: "ABIweddings",
+  instagram: "iam_mikukuu"
 }
 privacyText: "Privacy Policy"
 privacyHref: "#!"

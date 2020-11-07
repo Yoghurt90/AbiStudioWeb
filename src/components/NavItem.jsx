@@ -17,15 +17,16 @@ const NavItem = ({ to, anchors, langKey, defaultLang, children }) => {
     return (
       <NavDropdown title={toStrippedHash} id="nav-dropdown">
         {anchors.map((dropDownAnchorItem) => (
-          <NavDropdown.Item key={dropDownAnchorItem}>
+          // <NavDropdown.Item >
             <AnchorLink 
               className={clsx("dropdown-item")}
               activeClass="active"
+              key={dropDownAnchorItem}
               to={`${langKeyPrefix}/${dropDownAnchorItem}`}
             >
               {children || dropDownAnchorItem}
             </AnchorLink>
-          </NavDropdown.Item>
+          // </NavDropdown.Item>
         ))}
       </NavDropdown>
     );

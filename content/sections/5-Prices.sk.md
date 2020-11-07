@@ -9,6 +9,7 @@ packages: [
     packageName: "Alap csomag",
     packageBackground: "lightBlue",
     packageActionName: "Ajanlatkeres",
+    packageNameToSelect: "Alap",
     packageContent: [
       {
         content: "12óra rendelkezésre állás"
@@ -37,6 +38,7 @@ packages: [
     packageName: "Ezüst csomag",
     packageBackground: "silver",
     packageActionName: "Ajanlatkeres",
+    packageNameToSelect: "Ezüst",
     packageContent: [
       {
         content: "Egész napos rendelkezésre állás",
@@ -72,6 +74,7 @@ packages: [
     packageName: "Arany csomag",
     packageBackground: "gold",
     packageActionName: "Ajanlatkeres",
+    packageNameToSelect: "Arany",
     packageContent: [
       {
         content: "Egész napos rendelkezésre állás",
@@ -118,6 +121,7 @@ packages: [
     packageName: "Covid Mini",
     packageBackground: "lightGreen",
     packageActionName: "Ajanlatkeres",
+    packageNameToSelect: "Covid Mini",
     packageContent: [
       {
         content: "2-3 óra rendelkezésre állás",
@@ -147,6 +151,7 @@ packages: [
     packageName: "Covid Maxi",
     packageBackground: "lightGreen",
     packageActionName: "Ajanlatkeres",
+    packageNameToSelect: "Covid Maxi",
     packageContent: [
       {
         content: "5-6 óra rendelkezésre állás"

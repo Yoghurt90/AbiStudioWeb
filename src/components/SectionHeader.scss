@@ -3,6 +3,7 @@
     font-size: 40px;
     margin-top: 0;
     margin-bottom: 15px;
+    overflow-wrap: anywhere;
   }
   h3.section-subheading {
     font-size: 16px;
@@ -11,5 +12,11 @@
     margin-bottom: 75px;
     text-transform: none;
     @include serif-font;
+  }
+  h3.section-subheading-low-margin {
+    margin-bottom: 15px;
+  }
+  h2.section-heading-large-top-margin {
+    margin-top: 45px;
   }
 }

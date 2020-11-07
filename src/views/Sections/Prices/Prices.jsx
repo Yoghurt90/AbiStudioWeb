@@ -22,6 +22,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+import { Link } from "gatsby"
 
 import "./Prices.scss";
 
@@ -63,6 +64,12 @@ const useStyles = makeStyles({
     minWidth: 700,
     marginTop: 10,
   },
+  cardLink: {
+    color: "black",
+  },
+  cardActions: {
+    justifyContent: "center",
+  }
 });
 
 const Prices = ({ className, frontmatter }) => {
@@ -81,7 +88,7 @@ const Prices = ({ className, frontmatter }) => {
       </Row>
       <Row>
         <Grid container spacing={3}>
-          {packages.map(({ packageName, packageBackground, packageActionName, packageActionHref, packageContent }) => (
+          {packages.map(({ packageName, packageBackground, packageActionName, packageActionHref, packageNameToSelect, packageContent }) => (
             <Grid item xs key={packageName}>
               <Card className={classes.root} variant="outlined">
                 <CardContent>
@@ -105,8 +112,10 @@ const Prices = ({ className, frontmatter }) => {
                     ))}
                   </List>
                 </CardContent>
-                <CardActions>
-                  <Button size="small" href={packageActionHref}>{packageActionName}</Button>
+                <CardActions className={classes.cardActions}>
+                  <Button variant="outlined">
+                    <Link to={packageActionHref} state={{selectedPackage: packageNameToSelect}} className={classes.cardLink}>{packageActionName}</Link>
+                  </Button>
                 </CardActions>
               </Card>
             </Grid>
@@ -124,7 +133,7 @@ const Prices = ({ className, frontmatter }) => {
         </TableHead>
         <TableBody>
           {extras.rows.map(({ rowContent }) => (
-            <StyledTableRow key={rowContent}>
+            <StyledTableRow key={rowContent[0].content}>
               {rowContent.map(({ content }) => (
                 <StyledTableCell component="th" scope="row" key={content}>{content}</StyledTableCell>
               ))}

@@ -42,13 +42,19 @@ export const query = graphql`
           jumpToAnchor
           jumpToAnchorText
           menuText
-          portfolios {
-            content
-            extraInfo
+          sections {
             header
             subheader
-            imageFileNameDetail
-            imageFileName
+            contentImageFileName
+            content
+            teamMember {
+              header
+              imageFileName
+              social {
+                facebook
+              }
+              subheader
+            }
           }
           privacyHref
           privacyText
@@ -56,6 +62,8 @@ export const query = graphql`
             content
             header
             imageFileName
+            serviceActionHref
+            serviceActionName
           }
           social {
             facebook
@@ -63,6 +71,7 @@ export const query = graphql`
             linkedin
             medium
             twitter
+            instagram
           }
           subheader
           teamMember {
@@ -98,6 +107,7 @@ export const query = graphql`
             packageBackground
             packageActionName
             packageActionHref
+            packageNameToSelect
             packageContent {
               content
               subcontent
@@ -114,10 +124,14 @@ export const query = graphql`
             }
           }
           formData {
+            requiredFieldInvalidText
             nameLabel
             nameEmptyText
             emailLabel
             emailEmptyText
+            phoneLabel
+            phoneEmptyText
+            dateLabel
             messageLabel
             messageEmptyText
             buttonText
@@ -135,7 +149,7 @@ export const query = graphql`
   }
 `;
 
-const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap, allowedSections, needsTop } }) => {
+const IndexPage = ({ location, data, pathContext: { langKey, defaultLang, langTextMap, allowedSections, needsTop } }) => {
   const {
     site: {
       siteMetadata: { keywords, description },
@@ -175,6 +189,7 @@ const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap, all
           index += 1;
           return SectionComponent ? (
             <SectionComponent
+              location={location}
               key={sectionComponentName}
               className={index % 2 === 1 ? "bg-light" : null}
               frontmatter={frontmatter}
@@ -188,11 +203,13 @@ const IndexPage = ({ data, pathContext: { langKey, defaultLang, langTextMap, all
 };
 
 IndexPage.propTypes = {
+  location: PropTypes.object,
   data: PropTypes.object.isRequired,
   pathContext: PropTypes.object,
 };
 
 IndexPage.defaultProps = {
+  location: null,
   pathContext: {
     langKey: "en",
     defaultLang: "en",
