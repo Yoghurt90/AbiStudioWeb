@@ -41,9 +41,9 @@ const AboutUs = ({ className, frontmatter }) => {
           let imagePart;
           if (contentImageFileName) {
             imagePart = (
-              <Grid item xs={3} style={{minWidth:175}}>
+              <Grid item xs={3} style={{minWidth:225}}>
                 <Image
-                  className="img-fluid"
+                  className="mx-auto circle rounded-circle"
                   fileName={contentImageFileName}
                 />
               </Grid>
@@ -69,7 +69,7 @@ const AboutUs = ({ className, frontmatter }) => {
                 <SectionHeader header={header} subheader={subheader} subheaderClassName="section-subheading-low-margin" className={i > 1 ? headerClassName : null} />
               </Row>
               <Row>
-                <Grid container spacing={3}>
+                <Grid container spacing={3} alignItems="center">
                   {imagePart}
                   <Grid item xs>
                     <Typography className={classes.title} gutterBottom variant="caption" component="h2">
