@@ -22,7 +22,7 @@ import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
-import { Link } from "gatsby"
+import { navigate  } from "gatsby"
 
 import "./Prices.scss";
 
@@ -74,6 +74,15 @@ const useStyles = makeStyles({
 
 const Prices = ({ className, frontmatter }) => {
   const classes = useStyles();
+
+  const onPackageActionClick = React.useCallback((packageActionHref, packageNameToSelect) => {
+    console.log("ONCLICKEVENTPACKAGEACTIONHREF: " + packageActionHref);
+    console.log("ONCLICKEVENTpackageNameToSelect: " + packageNameToSelect);
+    navigate(packageActionHref,
+      {
+        state: {selectedPackage: packageNameToSelect},
+      })
+  }, []);
 
   if (!frontmatter) {
     return null;
@@ -139,8 +148,8 @@ const Prices = ({ className, frontmatter }) => {
                   </List>
                 </CardContent>
                 <CardActions className={classes.cardActions}>
-                  <Button variant="outlined">
-                    <Link to={packageActionHref} state={{selectedPackage: packageNameToSelect}} className={classes.cardLink}>{packageActionName}</Link>
+                  <Button variant="outlined" onClick={() => onPackageActionClick(packageActionHref, packageNameToSelect)}> 
+                    {packageActionName}
                   </Button>
                 </CardActions>
               </Card>
