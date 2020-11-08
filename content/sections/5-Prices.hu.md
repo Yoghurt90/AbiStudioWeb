@@ -1,14 +1,14 @@
 ---
-anchor: "Eskuvoi Arak"
-anchorGroup: "Arak"
+anchor: "Esküvői Árak"
+anchorGroup: "Árak"
 separatePage: true
-header: "Eskuvoi csomagjaink"
+header: "Esküvői csomagjaink"
 subheader: "Gecisokat kerek mindenert mert megtehetem."
 packages: [
   {
     packageName: "Alap csomag",
     packageBackground: "lightBlue",
-    packageActionName: "Ajanlatkeres",
+    packageActionName: "Ajánlatkérés",
     packageActionHref: "/Kapcsolat",
     packageNameToSelect: "Alap",
     packageContent: [
@@ -38,7 +38,7 @@ packages: [
   {
     packageName: "Ezüst csomag",
     packageBackground: "silver",
-    packageActionName: "Ajanlatkeres",
+    packageActionName: "Ajánlatkérés",
     packageActionHref: "/Kapcsolat",
     packageNameToSelect: "Ezüst",
     packageContent: [
@@ -75,7 +75,7 @@ packages: [
   {
     packageName: "Arany csomag",
     packageBackground: "gold",
-    packageActionName: "Ajanlatkeres",
+    packageActionName: "Ajánlatkérés",
     packageActionHref: "/Kapcsolat",
     packageNameToSelect: "Arany",
     packageContent: [
@@ -123,7 +123,7 @@ packages: [
   {
     packageName: "Covid Mini",
     packageBackground: "lightGreen",
-    packageActionName: "Ajanlatkeres",
+    packageActionName: "Ajánlatkérés",
     packageActionHref: "/Kapcsolat",
     packageNameToSelect: "Covid Mini",
     packageContent: [
@@ -154,7 +154,7 @@ packages: [
   {
     packageName: "Covid Maxi",
     packageBackground: "lightGreen",
-    packageActionName: "Ajanlatkeres",
+    packageActionName: "Ajánlatkérés",
     packageActionHref: "/Kapcsolat",
     packageNameToSelect: "Covid Maxi",
     packageContent: [

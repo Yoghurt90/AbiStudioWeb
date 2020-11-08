@@ -81,6 +81,32 @@ const Prices = ({ className, frontmatter }) => {
 
   const { anchor, header: rootHeader, subheader: rootSubHeader, packages, extras } = frontmatter;
 
+  let extrasPart;
+  if (extras) {
+    extrasPart = (
+      <Row>
+        <Table className={classes.table} aria-label="customized table">
+          <TableHead>
+            <TableRow>
+              {extras.headers.map(({ headerTitle }) => (
+                <StyledTableCell key={headerTitle}>{headerTitle}</StyledTableCell>
+              ))}
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {extras.rows.map(({ rowContent }) => (
+              <StyledTableRow key={rowContent[0].content}>
+                {rowContent.map(({ content }) => (
+                  <StyledTableCell component="th" scope="row" key={content}>{content}</StyledTableCell>
+                ))}
+              </StyledTableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </Row>
+    )
+  }
+
   return (
     <PageSection className={className} id={anchor}>
       <Row>
@@ -122,26 +148,7 @@ const Prices = ({ className, frontmatter }) => {
           ))}
         </Grid>
       </Row>
-      <Row>
-      <Table className={classes.table} aria-label="customized table">
-        <TableHead>
-          <TableRow>
-            {extras.headers.map(({ headerTitle }) => (
-              <StyledTableCell key={headerTitle}>{headerTitle}</StyledTableCell>
-            ))}
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {extras.rows.map(({ rowContent }) => (
-            <StyledTableRow key={rowContent[0].content}>
-              {rowContent.map(({ content }) => (
-                <StyledTableCell component="th" scope="row" key={content}>{content}</StyledTableCell>
-              ))}
-            </StyledTableRow>
-          ))}
-        </TableBody>
-      </Table>
-      </Row>
+      {extrasPart}
     </PageSection>
   );
 };

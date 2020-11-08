@@ -1,5 +1,5 @@
 ---
-anchor: "Galeria"
+anchor: "Galéria"
 separatePage: true
 header: "Legyen ez a galeria"
 subheader: "Ez majd nem scrollozos oldal lesz, de most meg az"

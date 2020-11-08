@@ -1,19 +1,19 @@
 ---
 anchor: "Kapcsolat"
 separatePage: true
-header: "Kerjen ajanlatot."
+header: "Kérjen ajánlatot."
 formData: {
-    requiredFieldInvalidText: "Tolts ki",
-    nameLabel: "Nev",
+    requiredFieldInvalidText: "Tölts ki",
+    nameLabel: "Név",
     nameEmptyText: "John Doe",
     emailLabel: "Email",
     emailEmptyText: "dummy@example.com",
     phoneLabel: "Telefon",
     phoneEmptyText: "+36/70-123-4567",
-    dateLabel: "Datum",
-    messageLabel: "Uzenet",
+    dateLabel: "Dátum",
+    messageLabel: "Üzenet",
     messageEmptyText: "",
-    buttonText: "Kuldes",
+    buttonText: "Küldés",
     submiturl: "https://formspree.io/f/mwkwbojq",
     packageLabel: "Csomagok",
     packageList: [
@@ -22,7 +22,7 @@ formData: {
         "Arany",
         "Covid Mini", 
         "Covid Maxi",
-        "Videoklip",
+        "Videóklip",
         "Rendeveny/Reklamfil",
     ]
 }

@@ -1,6 +1,6 @@
 ---
-anchor: "Rendezveny Arak"
-anchorGroup: "Arak"
+anchor: "Rendezvény Árak"
+anchorGroup: "Árak"
 separatePage: true
 header: "Rendezveny csomagjaink"
 subheader: "Gecisokat kerek mindenert mert megtehetem."
