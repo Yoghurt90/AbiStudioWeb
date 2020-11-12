@@ -24,7 +24,7 @@ module.exports = {
         background_color: "#ffffff",
         theme_color: "#fed136",
         display: "minimal-ui",
-        icon: "content/assets/AbiCameraIconPNG.png",
+        icon: "content/assets/images/AbiCameraIconPNG.png",
       },
     },
     "gatsby-transformer-remark",

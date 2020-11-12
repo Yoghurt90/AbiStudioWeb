@@ -35,6 +35,7 @@ export const query = graphql`
           brand
           anchor
           anchorGroup
+          hideInNavbar
           content
           copyright
           header
@@ -42,17 +43,16 @@ export const query = graphql`
           jumpToAnchor
           jumpToAnchorText
           menuText
+          pageBackgroundImage
           sections {
             header
             subheader
             contentImageFileName
+            contentImageText
             content
             teamMember {
               header
               imageFileName
-              social {
-                facebook
-              }
               subheader
             }
           }
@@ -63,7 +63,6 @@ export const query = graphql`
             header
             imageFileName
             serviceActionHref
-            serviceActionName
           }
           social {
             facebook
@@ -71,7 +70,6 @@ export const query = graphql`
             linkedin
             medium
             twitter
-            instagram
           }
           subheader
           teamMember {
@@ -97,12 +95,16 @@ export const query = graphql`
             partnerIconLink
           }
           contactsHeader
+          contactsPhone
+          contactsMail
+          contactsLogo
           contacts {
             contactIcon
             contactText
             contactUserName
           }
           packages {
+            packageSectionHeader
             packageName
             packageBackground
             packageActionName
@@ -134,6 +136,9 @@ export const query = graphql`
             dateLabel
             messageLabel
             messageEmptyText
+            messageHelperText
+            privacyPolicyMessage
+            privacyErrorText
             buttonText
             submiturl
             packageLabel

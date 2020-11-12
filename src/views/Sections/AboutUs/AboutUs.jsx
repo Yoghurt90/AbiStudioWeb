@@ -10,12 +10,19 @@ import Typography from '@material-ui/core/Typography';
 import Image from "components/Image";
 import Grid from '@material-ui/core/Grid';
 import TeamMember from "components/TeamMember";
+import Divider from '@material-ui/core/Divider';
 import "./AboutUs.scss";
 
 const useStyles = makeStyles({
   title: {
     fontSize: 27,
-    textAlign: "center",
+    textAlign: "left",
+  },
+  divider: {
+    marginBottom: 25,
+    margin: "auto",
+    width: "25%",
+    backgroundColor: "black",
   },
 });
 
@@ -37,7 +44,7 @@ const AboutUs = ({ className, frontmatter }) => {
   return (
     <PageSection className={clsx("portfolio-section", className)} id={anchorStrippedHash}>
       {rootSections.map(
-        ({ content, contentImageFileName, header, subheader, teamMember }) => {
+        ({ content, contentImageFileName, contentImageText, header, subheader, teamMember }) => {
           let imagePart;
           if (contentImageFileName) {
             imagePart = (
@@ -46,6 +53,7 @@ const AboutUs = ({ className, frontmatter }) => {
                   className="mx-auto circle rounded-circle"
                   fileName={contentImageFileName}
                 />
+                <p className="text-muted" style={{textAlign: "center"}}>{contentImageText}</p>
               </Grid>
             )
           }
@@ -53,15 +61,19 @@ const AboutUs = ({ className, frontmatter }) => {
           let teamMemberPart;
           if (teamMember) {
             teamMemberPart = (
-              <Row>
-                {teamMember.map(({ memberHeader, ...tmProps }) => (
-                  <Col sm={4} key={header}>
-                    <TeamMember header={memberHeader} {...tmProps} />
-                  </Col>
-                ))}
-              </Row>
+              <React.Fragment key={teamMember}>
+                <Divider className={classes.divider} variant="middle"/>
+                <Row style={{marginTop: "20px"}}>
+                  {teamMember.map(({ memberHeader, ...tmProps }) => (
+                    <Col sm={4} key={header}>
+                      <TeamMember header={memberHeader} {...tmProps} />
+                    </Col>
+                  ))}
+                </Row>
+              </React.Fragment>
             )
           }
+
           i += 1;
           return (
             <React.Fragment key={content}>
@@ -69,9 +81,9 @@ const AboutUs = ({ className, frontmatter }) => {
                 <SectionHeader header={header} subheader={subheader} subheaderClassName="section-subheading-low-margin" className={i > 1 ? headerClassName : null} />
               </Row>
               <Row>
-                <Grid container spacing={3} alignItems="center">
+                <Grid container spacing={3} justify="center" >
                   {imagePart}
-                  <Grid item xs>
+                  <Grid item xs={9}>
                     <Typography className={classes.title} gutterBottom variant="caption" component="h2">
                       {content}
                     </Typography>

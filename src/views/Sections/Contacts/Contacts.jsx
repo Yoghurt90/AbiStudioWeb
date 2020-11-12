@@ -11,8 +11,9 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import * as SocialIcons from "components/SocialIcons";
-import CircleIcon from "components/CircleIcon";
 import CircleFAButton from "components/CircleFAButton";
+import Grid from '@material-ui/core/Grid';
+import Image from "components/Image";
 
 const useStyles = makeStyles({
   title: {
@@ -21,6 +22,11 @@ const useStyles = makeStyles({
   },
   listRoot: {
       width: "100%",
+  },
+  logo: {
+    maxWidth: 150,
+    maxHeight: 150,
+    margin: "auto",
   }
 });
 
@@ -31,43 +37,63 @@ const Contacts = ({ className, frontmatter }) => {
     return null;
   }
 
-  const { partnersHeader, partners, contactsHeader, contacts } = frontmatter;
+  const { partnersHeader, partners, contactsHeader, contactsPhone, contactsMail, contactsLogo, contacts } = frontmatter;
 
   return (
     <PageSection className={clsx("portfolio-section", className)}>
       <Row>
-        <SectionHeader header={partnersHeader}/>
+        <SectionHeader header={partnersHeader} className="section-heading-smaller-text"/>
       </Row>
       <Row>
-        <List dense={true} className={classes.listRoot}>
+        <Grid container direction="row" justify="space-evenly" alignItems="center">
           {partners.map(({ partnerName, partnerType, partnerIcon, partnerIconLink }) => (
-            <ListItem key={partnerName}>
-              <ListItemIcon>
+            <Grid item xs key={partnerName}>
+              <h4 style={{textAlign: "center"}}>{partnerType}</h4>
+              <Row className="justify-content-md-center">
                 {partnerIcon === "FB" ? <SocialIcons.Facebook userName={partnerIconLink} /> : null}
                 {partnerIcon === "INSTA" ? <SocialIcons.Instagram userName={partnerIconLink} /> : null}
-              </ListItemIcon>
-              <ListItemText primary={partnerName} secondary={partnerType} />
-            </ListItem>
+                <p className="text-muted" style={{marginTop: "5px"}}>{partnerIconLink}</p>
+              </Row>
+            </Grid>
           ))}
-        </List>
+        </Grid>
       </Row>
       <Row>
-        <SectionHeader header={contactsHeader}/>
+        <SectionHeader header={contactsHeader} className="section-heading-large-top-margin"/>
       </Row>
       <Row>
-        <List dense={true} className={classes.listRoot}>
-          {contacts.map(({ contactIcon, contactText, contactUserName }) => (
-            <ListItem key={contactText}>
-              <ListItemIcon>
-                {contactIcon === "PHONE" ? <CircleFAButton iconName="PhoneIcon" /> : null}
-                {contactIcon === "MAIL" ? <CircleFAButton iconName="EnvelopIcon" /> : null}
-                {contactIcon === "FB" ? <SocialIcons.Facebook userName={contactUserName} /> : null}
-                {contactIcon === "INSTA" ? <SocialIcons.Instagram userName={contactUserName} /> : null}
-              </ListItemIcon>
-              <ListItemText primary={contactText} />
-            </ListItem>
-          ))}
-        </List>
+        <Grid container direction="row" justify="space-evenly" alignItems="center">
+          <Grid item xs>
+            <Image
+              className={classes.logo}
+              fileName={contactsLogo}
+            />
+            <Row className="justify-content-md-center">
+              {contacts.map(({ contactIcon, contactUserName }) => (
+                <React.Fragment key={contactIcon}>
+                  {contactIcon === "FB" ? <SocialIcons.Facebook userName={contactUserName} /> : null}
+                  {contactIcon === "INSTA" ? <SocialIcons.Instagram userName={contactUserName} /> : null}
+                </React.Fragment>
+              ))}
+            </Row>
+          </Grid>
+          <Grid item xs>
+            <List dense={true} className={classes.listRoot}>
+              <ListItem>
+                <ListItemIcon>
+                  <CircleFAButton iconName="PhoneIcon" />
+                </ListItemIcon>
+                <ListItemText primary={contactsPhone}/>
+              </ListItem>
+              <ListItem>
+                <ListItemIcon>
+                  <CircleFAButton iconName="EnvelopIcon" />
+                </ListItemIcon>
+                <ListItemText primary={contactsMail}/>
+              </ListItem>
+            </List>
+          </Grid>
+        </Grid>
       </Row>
     </PageSection>
   );

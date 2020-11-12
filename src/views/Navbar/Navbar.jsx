@@ -65,6 +65,7 @@ const MyNavbar = ({ anchors, frontmatter, extraItems, langKey, defaultLang }) =>
         <Navbar.Collapse>
           <Nav className="text-uppercase ml-auto">
             {anchors.map((anchor) => {
+              if (anchor.hideInNavbar) return null;
               if (!anchor.anchorGroup) {
                 return (<NavItem key={anchor.anchor} to={anchor.anchor} onClick={closeMenu} langKey={langKey} defaultLang={defaultLang} />);
               } 

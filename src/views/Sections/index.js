@@ -7,3 +7,4 @@ export { default as AboutUs } from "./AboutUs";
 export { default as MyWork } from "./MyWork";
 export { default as Gallery } from "./Gallery";
 export { default as Clients } from "./Clients";
+export { default as Cinematography } from "./Cinematography";

@@ -1,7 +1,6 @@
 ---
-header: "Jo latni"
-subheader: "Udvozoljuk studionkban!"
+subheader: "Üdvözöljük stúdiónkban!"
 imageFileName: "header-bg.jpg"
-jumpToAnchor: "Rolunk"
-jumpToAnchorText: "Meselj meg"
+jumpToAnchor: "Galéria"
+jumpToAnchorText: "Galéria"
 ---

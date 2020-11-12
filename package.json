@@ -19,6 +19,7 @@
     "bootstrap": "^4.4.1",
     "clsx": "^1.1.0",
     "date-fns": "^2.16.1",
+    "framer-motion": "^2.9.4",
     "gatsby": "^2.20.22",
     "gatsby-image": "^2.3.2",
     "gatsby-plugin-anchor-links": "^1.1.1",

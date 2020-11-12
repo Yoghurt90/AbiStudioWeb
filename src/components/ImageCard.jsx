@@ -3,11 +3,10 @@ import PropTypes from "prop-types";
 import clsx from "clsx";
 
 import { Container, Card } from "react-bootstrap";
-import Image from "components/Image";
 import "./ImageCard.scss";
 import webintromp4 from "content/assets/videos/web_intro.mp4";
 
-const ImageCard = ({ className, imageFileName, imageAlt, header, subheader, extraInfo }) => {
+const ImageCard = ({ className, header, subheader, extraInfo }) => {
   return (
     <Card className={clsx("image-card bg-dark text-white text-center", className)}>
       {/* <Image className="image" fileName={imageFileName} alt={imageAlt || header || subheader} /> */}
@@ -31,8 +30,6 @@ const ImageCard = ({ className, imageFileName, imageAlt, header, subheader, extr
 
 ImageCard.propTypes = {
   className: PropTypes.string,
-  imageFileName: PropTypes.string,
-  imageAlt: PropTypes.string,
   header: PropTypes.string,
   subheader: PropTypes.string,
   extraInfo: PropTypes.any,
@@ -40,8 +37,6 @@ ImageCard.propTypes = {
 
 ImageCard.defaultProps = {
   className: null,
-  imageFileName: null,
-  imageAlt: null,
   header: "",
   subheader: "",
   extraInfo: null,

@@ -7,13 +7,13 @@ import SectionHeader from "components/SectionHeader";
 import PageSection from "components/PageSection";
 import { makeStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
 import Typography from '@material-ui/core/Typography';
 import Image from "components/Image";
-import { Link } from "gatsby"
+import { navigate } from "gatsby"
+import { motion } from "framer-motion"
+import clsx from "clsx";
 
 const useStyles = makeStyles({
   root: {
@@ -49,6 +49,10 @@ const useStyles = makeStyles({
 const MyWork = ({ className, frontmatter }) => {
   const classes = useStyles();
 
+  const onImageClick = React.useCallback((serviceActionHref) => {
+    navigate(serviceActionHref)
+  }, []);
+
   if (!frontmatter) {
     return null;
   }
@@ -64,28 +68,30 @@ const MyWork = ({ className, frontmatter }) => {
       </Row>
       <Row className="text-center">
         <Grid container spacing={3}>
-          {services.map(({ imageFileName, header, content, serviceActionHref, serviceActionName }) => (
+          {services.map(({ imageFileName, header, content, serviceActionHref }) => (
             <Grid item xs key={header}>
-              <Card className={classes.root} variant="outlined">
-                <CardContent>
-                  <Image
-                    className="img-fluid"
-                    fileName={imageFileName}
-                    alt={header}
-                  />
-                  <Typography className={classes.title} gutterBottom variant="caption" component="h2">
-                    {header}
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                    {content}
-                  </Typography>
-                </CardContent>
-                <CardActions className={classes.cardActions}>
-                  <Button variant="outlined">
-                    <Link to={serviceActionHref} className={classes.cardLink}>{serviceActionName}</Link>
-                  </Button>
-                </CardActions>
-              </Card>
+              <motion.div whileHover={{ scale: 1.1 }}>
+                <Card className={clsx("cursor-pointer", classes.root)} variant="outlined" onClick={() => onImageClick(serviceActionHref)} >
+                  <CardContent>
+                    <Image
+                      className="img-fluid"
+                      fileName={imageFileName}
+                      alt={header}
+                    />
+                    <Typography className={classes.title} gutterBottom variant="caption" component="h2">
+                      {header}
+                    </Typography>
+                    <Typography variant="body2" color="textSecondary" component="p">
+                      {content}
+                    </Typography>
+                  </CardContent>
+                  {/* <CardActions className={classes.cardActions}>
+                    <Button variant="outlined">
+                      <Link to={serviceActionHref} className={classes.cardLink}>{serviceActionName}</Link>
+                    </Button>
+                  </CardActions> */}
+                </Card>
+              </motion.div>
             </Grid>
           ))}
         </Grid>

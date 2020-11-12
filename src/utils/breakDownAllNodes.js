@@ -23,7 +23,8 @@ export default function breakDownAllNodes(nodes) {
   const anchors = sectionsNodes.map(node => { 
     const result = {
       anchor: node.frontmatter.anchor,
-      anchorGroup: node.frontmatter.anchorGroup
+      anchorGroup: node.frontmatter.anchorGroup,
+      hideInNavbar: node.frontmatter.hideInNavbar
     };
     return result;
   }).filter(identity);
