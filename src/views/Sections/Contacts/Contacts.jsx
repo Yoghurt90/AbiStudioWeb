@@ -27,6 +27,9 @@ const useStyles = makeStyles({
     maxWidth: 150,
     maxHeight: 150,
     margin: "auto",
+  },
+  socialRow: {
+    marginTop: 15,
   }
 });
 
@@ -68,7 +71,7 @@ const Contacts = ({ className, frontmatter }) => {
               className={classes.logo}
               fileName={contactsLogo}
             />
-            <Row className="justify-content-md-center">
+            <Row className={clsx("justify-content-md-center", classes.socialRow)}>
               {contacts.map(({ contactIcon, contactUserName }) => (
                 <React.Fragment key={contactIcon}>
                   {contactIcon === "FB" ? <SocialIcons.Facebook userName={contactUserName} /> : null}

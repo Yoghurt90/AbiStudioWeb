@@ -47,7 +47,7 @@ const Cinematography = ({ className, frontmatter }) => {
   const image = imageData.allFile.nodes.find((n) => n.relativePath.includes(pageBackgroundImage));
 
   return (
-    <PageSection className={clsx("portfolio-section", className)} style={{ backgroundImage: "url(" + image.publicURL + ")", backgroundSize: "100%"}}> 
+    <PageSection className={clsx("portfolio-section", className)} style={{ backgroundImage: "url(" + image.publicURL + ")", backgroundSize: "cover"}}> 
       <Row>
         <SectionHeader header={header} subheader={subheader} subheaderClassName="section-subheading-low-margin"/>
       </Row>

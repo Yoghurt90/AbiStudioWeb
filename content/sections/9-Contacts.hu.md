@@ -23,7 +23,7 @@ partners: [
 contactsHeader: "Kapcsolat"
 contactsPhone: "+36 30 798 8687"
 contactsMail: "mihalypusko@gmail.com"
-contactsLogo: "abi_logo.png"
+contactsLogo: "abi_logo_black.png"
 contacts: [
     {
         contactIcon: "FB",

@@ -4,12 +4,12 @@ header: "Szolgáltatásaink"
 subheader: "Elérhető áron, Prémium minőség"
 services: [
   {
-    imageFileName: "rick.jpg",
+    imageFileName: "wedding_service.png",
     header: "Esküvő",
     serviceActionHref: "Esküvői Árak",
   },
   {
-    imageFileName: "rick.jpg",
+    imageFileName: "clip_service.png",
     header: "Videóklip",
     serviceActionHref: "Klip Árak",
   },
