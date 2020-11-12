@@ -9,6 +9,7 @@ import useWindowOnScroll from "hooks/useWindowOnScroll";
 import useSmoothScrollTo from "hooks/useSmoothScrollTo";
 import Icon from "components/Icon";
 import NavItem from "components/NavItem";
+import { navigate } from "gatsby"
 
 import "./Navbar.scss";
 
@@ -27,7 +28,12 @@ const MyNavbar = ({ anchors, frontmatter, extraItems, langKey, defaultLang }) =>
   const handleBrandClick = React.useCallback(() => {
     closeMenu();
     handleScrollToTop();
-  }, [closeMenu, handleScrollToTop]);
+    if (langKey === defaultLang) {
+      navigate("/");
+    } else {
+      navigate("/" + langKey);
+    }
+  }, [closeMenu, handleScrollToTop, langKey, defaultLang]);
 
   const [shrink, setShrink] = React.useState(false);
   const handleWindowScroll = React.useCallback(() => {

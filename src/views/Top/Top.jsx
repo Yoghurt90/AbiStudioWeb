@@ -2,22 +2,24 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { Button } from "react-bootstrap";
-import useSmoothScrollTo from "hooks/useSmoothScrollTo";
 import ImageCard from "components/ImageCard";
+import { navigate } from "gatsby"
 
 const Top = ({ frontmatter }) => {
+  const handleButtonClick = React.useCallback((anchor) => {
+    navigate("/" + anchor);
+  }, []);
+
   if (!frontmatter) {
     return null;
   }
 
   const { header, subheader, imageFileName, jumpToAnchor, jumpToAnchorText } = frontmatter;
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const scrollToSection = useSmoothScrollTo(jumpToAnchor);
 
   let extraInfoPart;
   if (jumpToAnchor && jumpToAnchorText) {
     extraInfoPart = (
-      <Button size="xl" variant="primary" className="text-uppercase" onClick={scrollToSection}>
+      <Button size="xl" variant="primary" className="text-uppercase" onClick={() => {handleButtonClick(jumpToAnchor)}}>
         {jumpToAnchorText}
       </Button>
     );
