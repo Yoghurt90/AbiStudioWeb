@@ -34,8 +34,10 @@
     "gatsby-plugin-sharp": "^2.5.4",
     "gatsby-remark-images": "^3.0.10",
     "gatsby-source-filesystem": "^2.2.2",
+    "gatsby-source-vimeo": "^1.1.8",
     "gatsby-transformer-remark": "^2.6.34",
     "gatsby-transformer-sharp": "^2.4.4",
+    "googleapis": "^64.0.0",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
     "ramda": "^0.27.0",
@@ -43,8 +45,10 @@
     "react-bootstrap": "^1.0.0",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
+    "react-photo-gallery": "^8.0.0",
     "react-router-dom": "^5.2.0",
     "react-scroll": "^1.7.16",
+    "react-swipeable-views": "^0.13.9",
     "throttle-debounce": "^2.1.0"
   },
   "devDependencies": {

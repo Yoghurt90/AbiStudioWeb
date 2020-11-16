@@ -42,6 +42,31 @@ module.exports = {
         path: `${__dirname}/content/assets/images`,
       },
     },
+    {
+      resolve: "custom-source-youtube",
+      options: {
+        // Comma-separated list of the YouTube playlist ID(s)
+        playlistId: "PL3XLvoaGQ93sOiAXWY4MnUNW-bKuZNViP,PL3XLvoaGQ93sxgN6CxqocjddGm6b0GpX6",
+        apiKey: 'AIzaSyD8vCUsEkHYr9IkUTFOR6GjRqvmm6Ngzj8',
+        debug: true,
+      },
+    },
+    // {
+    //   resolve: `gatsby-source-youtube-v2`,
+    //   options: {
+    //     channelId: ['UCSZVBxTQFzR6xZ0WSNlRZSA'],
+    //     apiKey: 'AIzaSyD8vCUsEkHYr9IkUTFOR6GjRqvmm6Ngzj8',
+    //     maxVideos: 50 // Defaults to 50
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-source-vimeo`,
+    //   options: {
+    //     clientID: '70df0f11ea76b8a22b090cb42972d173ac3a4a27',
+    //     clientSecret: 'znq6dZEjiqg1lP/GFwNi8NMhKuTjq6DhRoxYWkH71TZneFk77FZpoz8sseBqUu/cp335cKDfBUxnU2L72Job2yT1w/GtGt1BuiDzPrNN+CxAgJaUeSrpGPjvkDfS1zaQ',
+    //     userID: 'omgvisuals',
+    //   },
+    // },
     "gatsby-plugin-eslint",
     "gatsby-plugin-material-ui",
     "gatsby-plugin-react-helmet",

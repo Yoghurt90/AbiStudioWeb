@@ -1,0 +1,94 @@
+{
+  "_from": "gatsby-source-youtube",
+  "_id": "gatsby-source-youtube@2.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-iI1rN8ajI62DKE0CxcTfwkp4rs2cW2wRqxJGHYLJ61p0QbGFh9KFGz6WskjBdzwSqW0+1PHEcHGUG8Lx8TOoUA==",
+  "_location": "/gatsby-source-youtube",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "gatsby-source-youtube",
+    "name": "gatsby-source-youtube",
+    "escapedName": "gatsby-source-youtube",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/gatsby-source-youtube/-/gatsby-source-youtube-2.2.0.tgz",
+  "_shasum": "25006d3f51d580c011c71f6f224cb86122a97f1e",
+  "_spec": "gatsby-source-youtube",
+  "_where": "E:\\GatsbyProjects\\First",
+  "author": {
+    "name": "Cédric Delpoux",
+    "email": "cedric.delpoux@gmail.com"
+  },
+  "bin": {
+    "gatsby-source-youtube-token": "utils/generate-token.js"
+  },
+  "bugs": {
+    "url": "https://github.com/cedricdelpoux/gatsby-source-youtube/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "gatsby-source-filesystem": "^2.3.31",
+    "google-oauth2-env-vars": "^1.1.0",
+    "googleapis": "^60.0.1"
+  },
+  "deprecated": false,
+  "description": "Gatsby plugin to use Youtube as a data source",
+  "devDependencies": {
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-react": "^7.21.2",
+    "husky": "^4.3.0",
+    "lint-staged": "^10.4.0",
+    "prettier": "2.1.2"
+  },
+  "files": [
+    "gatsby-node.js",
+    "utils"
+  ],
+  "homepage": "https://github.com/cedricdelpoux/gatsby-source-youtube#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-source",
+    "gatsby-source-plugin",
+    "google",
+    "youtube",
+    "videos"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "*.js": [
+      "yarn lint"
+    ],
+    "*.{css,js,md}": [
+      "prettier --write"
+    ]
+  },
+  "main": "index.js",
+  "name": "gatsby-source-youtube",
+  "peerDependencies": {
+    "gatsby": "^2.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cedricdelpoux/gatsby-source-youtube.git"
+  },
+  "scripts": {
+    "lint": "eslint gatsby-node.js utils example",
+    "prepublishOnly": "yarn lint"
+  },
+  "version": "2.2.0"
+}

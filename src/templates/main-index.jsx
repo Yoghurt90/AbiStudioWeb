@@ -72,18 +72,6 @@ export const query = graphql`
             twitter
           }
           subheader
-          teamMember {
-            header
-            imageFileName
-            social {
-              facebook
-              github
-              linkedin
-              medium
-              twitter
-            }
-            subheader
-          }
           termsHref
           termsText
           title
@@ -125,6 +113,9 @@ export const query = graphql`
               }
             }
           }
+          weddingPlaylistId
+          clipPlaylistId
+          clipHeader
           formData {
             requiredFieldInvalidText
             nameLabel
