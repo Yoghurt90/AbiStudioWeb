@@ -116,6 +116,8 @@ export const query = graphql`
           weddingPlaylistId
           clipPlaylistId
           clipHeader
+          eventHeader
+          eventSubHeader
           formData {
             requiredFieldInvalidText
             nameLabel

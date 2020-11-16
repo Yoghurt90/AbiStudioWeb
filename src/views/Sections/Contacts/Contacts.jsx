@@ -30,6 +30,10 @@ const useStyles = makeStyles({
   },
   socialRow: {
     marginTop: 15,
+  },
+  lowPaddingSection: {
+    paddingTop: 25,
+    paddingBottom: 25,
   }
 });
 
@@ -43,7 +47,7 @@ const Contacts = ({ className, frontmatter }) => {
   const { partnersHeader, partners, contactsHeader, contactsPhone, contactsMail, contactsLogo, contacts } = frontmatter;
 
   return (
-    <PageSection className={clsx("portfolio-section", className)}>
+    <PageSection className={clsx(classes.lowPaddingSection, className)}>
       <Row>
         <SectionHeader header={partnersHeader} className="section-heading-smaller-text"/>
       </Row>

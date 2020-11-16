@@ -3,6 +3,8 @@ anchor: "Galéria"
 separatePage: true
 header: "Esküvők"
 clipHeader: "Klippek"
+eventHeader: "Rendezvények"
+eventSubHeader: "Hamarosan"
 weddingPlaylistId: "PL3XLvoaGQ93sOiAXWY4MnUNW-bKuZNViP"
 clipPlaylistId: "PL3XLvoaGQ93sxgN6CxqocjddGm6b0GpX6"
 ---

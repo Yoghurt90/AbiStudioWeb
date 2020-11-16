@@ -13,6 +13,7 @@ const useStyles = makeStyles({
   title: {
     fontSize: 27,
     textAlign: "left",
+    color: "white",
   },
   divider: {
     marginBottom: 25,

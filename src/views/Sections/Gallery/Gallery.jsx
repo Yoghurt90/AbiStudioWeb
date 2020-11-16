@@ -171,6 +171,8 @@ const Gallery = ({ className, frontmatter }) => {
     anchor,
     header: rootHeader,
     clipHeader,
+    eventHeader,
+    eventSubHeader,
     weddingPlaylistId,
     clipPlaylistId,
   } = frontmatter;
@@ -260,6 +262,9 @@ const Gallery = ({ className, frontmatter }) => {
     }
   });
 
+  clipthumbnails = clipthumbnails.reverse();
+  weddingthumbnails = weddingthumbnails.reverse();
+
   return (
     <PageSection className={clsx(classes.sectionRoot, className)} id={anchor}>
       <Tabs
@@ -272,6 +277,7 @@ const Gallery = ({ className, frontmatter }) => {
       >
         <Tab label={rootHeader} {...a11yProps(0)} className={classes.tabButton} classes={{selected: classes.tabSelected}}/>
         <Tab label={clipHeader} {...a11yProps(1)} className={classes.tabButton} classes={{selected: classes.tabSelected}}/>
+        <Tab label={eventHeader} {...a11yProps(2)} className={classes.tabButton} classes={{selected: classes.tabSelected}}/>
       </Tabs>
       <SwipeableViews 
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'} 
@@ -297,6 +303,11 @@ const Gallery = ({ className, frontmatter }) => {
           </Row>
           <Row>
             <PhotoGallery photos={clipthumbnails} renderImage={imageRenderer}/>
+          </Row>
+        </TabPanel>
+        <TabPanel value={value} index={2} dir={theme.direction}>
+          <Row style={{marginTop: 50}}>
+            <SectionHeader header={eventHeader} subheader={eventSubHeader}/>
           </Row>
         </TabPanel>
       </SwipeableViews>
