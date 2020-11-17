@@ -14,7 +14,7 @@ formData: {
     messageLabel: "Üzenet",
     messageEmptyText: "",
     messageHelperText: "Kérlek írjátok ide az eskövő fontosabb részleteit, helyszínét, esetleg ha van valami különleges kérésetek.",
-    privacyPolicyMessage: "Az adatokat bizalmasan kezeljük, és nem adjuk ki harmadik feélnek semmilyen formában.",
+    privacyPolicyMessage: "Az adatokat bizalmasan kezeljük, és nem adjuk ki harmadik félnek semmilyen formában.",
     privacyErrorText: "Az adatkezelés elfogadása kötelező!",
     buttonText: "Küldés",
     submiturl: "https://formspree.io/f/mwkwbojq",
