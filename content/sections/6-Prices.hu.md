@@ -4,7 +4,8 @@ anchorGroup: "Árak"
 hideInNavbar: true
 separatePage: true
 header: "Esküvői csomagjaink"
-subheader: "Csomagjaink változtathatóak és személyre szabhatóak, az igényeiteknek megfelelően"
+subheader: "Videózás helyett filmkészítés"
+secondSubheader: "Csomagjaink változtathatóak és személyre szabhatóak, az igényeiteknek megfelelően"
 pageBackgroundImage: "wedding_background.jpg"
 packages: [
   {
@@ -14,6 +15,9 @@ packages: [
     packageActionHref: "/Kapcsolat",
     packageNameToSelect: "Alap",
     packageContent: [
+      {
+        content: "110.000ft"
+      },
       {
         content: "12óra rendelkezésre állás"
       },
@@ -31,9 +35,6 @@ packages: [
       },
       {
         content: "Az elkészült filmek internetes tárhelyről letölthetők"
-      },
-      {
-        content: "110.000ft - 300eu"
       }
     ]
   },
@@ -44,6 +45,9 @@ packages: [
     packageActionHref: "/Kapcsolat",
     packageNameToSelect: "Ezüst",
     packageContent: [
+      {
+        content: "150.000ft"
+      },
       {
         content: "Egész napos rendelkezésre állás",
         subcontent: "(készülődéstől a menyecsketánc végéig kb. 02:00ig)"
@@ -68,9 +72,6 @@ packages: [
       },
       {
         content: "Az elkészült filmek internetes tárhelyről letölthetők"
-      },
-      {
-        content: "150.000ft - 400eu"
       }
     ]
   },
@@ -81,6 +82,9 @@ packages: [
     packageActionHref: "/Kapcsolat",
     packageNameToSelect: "Arany",
     packageContent: [
+      {
+        content: "200.000ft"
+      },
       {
         content: "Egész napos rendelkezésre állás",
         subcontent: "(készülődéstől a menyecsketánc végéig kb. 02:00ig)"
@@ -116,9 +120,6 @@ packages: [
       },
       {
         content: "Az elkészült filmek internetes tárhelyről letölthetők és diszdobozos pendriveon is átadásra kerül"
-      },
-      {
-        content: "200.000ft - 550eu"
       }
     ]
   },
@@ -130,6 +131,9 @@ packages: [
     packageActionHref: "/Kapcsolat",
     packageNameToSelect: "Covid Mini",
     packageContent: [
+      {
+        content: "50.000ft"
+      },
       {
         content: "2-3 óra rendelkezésre állás",
         subcontent: "(készülődéstől a szertartás végéig)"
@@ -148,9 +152,6 @@ packages: [
       },
       {
         content: "Az elkészült filmek internetes tárhelyről letölthetők"
-      },
-      {
-        content: "40.000ft - 110eu"
       }
     ]
   },
@@ -161,6 +162,9 @@ packages: [
     packageActionHref: "/Kapcsolat",
     packageNameToSelect: "Covid Maxi",
     packageContent: [
+      {
+        content: "110.000ft"
+      },
       {
         content: "5-6 óra rendelkezésre állás"
       },
@@ -188,9 +192,6 @@ packages: [
       },
       {
         content: "Az elkészült filmek internetes tárhelyről letölthetők"
-      },
-      {
-        content: "110.000ft - 300eu"
       }
     ]
   }
@@ -216,7 +217,7 @@ extras: {
         content: "Drón felvétel + 1 asszisztens"
       },
       {
-        content: "30.000ft - 80eu"
+        content: "30.000ft"
       }
     ],
     rowContent: [
@@ -227,7 +228,7 @@ extras: {
         content: "4k minőség"
       },
       {
-        content: "15.000ft - 40eu"
+        content: "15.000ft"
       }
     ],
     rowContent: [
@@ -238,7 +239,7 @@ extras: {
         content: "Vágatlan anyag (megrendelő által biztositott HDD-n)"
       },
       {
-        content: "10.000ft - 25eu"
+        content: "10.000ft"
       }
     ],
     rowContent: [

@@ -16,8 +16,8 @@ partners: [
     {
         partnerName: "ZQ MARI",
         partnerType: "Esküvői meghivó",
-        partnerIcon: "INSTA",
-        partnerIconLink: "iam_mikukuu"
+        partnerIcon: "FB",
+        partnerIconLink: "100009459593242"
     }
 ]
 contactsHeader: "Kapcsolat"

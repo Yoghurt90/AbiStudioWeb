@@ -8,3 +8,4 @@ export { default as MyWork } from "./MyWork";
 export { default as Gallery } from "./Gallery";
 export { default as Clients } from "./Clients";
 export { default as Cinematography } from "./Cinematography";
+export { default as Faq } from "./Faq";

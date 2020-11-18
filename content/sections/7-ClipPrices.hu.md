@@ -4,7 +4,8 @@ anchorGroup: "Árak"
 hideInNavbar: true
 separatePage: true
 header: "Klip csomagjaink"
-subheader: "Gecisokat kerek mindenert mert megtehetem."
+headerClassName: "whiteForeColor"
+subheader: "Életre kel a zene"
 pageBackgroundImage: "clip_background.jpg"
 packages: [
   {
@@ -14,6 +15,10 @@ packages: [
     packageActionHref: "/Kapcsolat",
     packageNameToSelect: "Videóklip",
     packageContent: [
+      {
+        content: "Ez az ár csak tájékoztató jellegű",
+        subcontent: "40.000ft - 400.000ft",
+      },
       {
         content: "Egy videoklip ára sokmindentől függhet"
       },
@@ -34,10 +39,6 @@ packages: [
       },
       {
         content: "hány tagú stáb kell hozzá"
-      },
-      {
-        content: "Ez az ár csak tájékoztató jellegű",
-        subcontent: "40.000ft - 400.000ft"
       }
     ]
   }

@@ -24,6 +24,9 @@ const useStyles = makeStyles({
     width: "25%",
     backgroundColor: "black",
   },
+  sectionRoot: {
+    paddingTop: 75,
+  }
 });
 
 const AboutUs = ({ className, frontmatter }) => {
@@ -42,9 +45,9 @@ const AboutUs = ({ className, frontmatter }) => {
   let i = 0;
 
   return (
-    <PageSection className={clsx("portfolio-section", className)} id={anchorStrippedHash}>
+    <PageSection className={clsx("portfolio-section", classes.sectionRoot, className)} id={anchorStrippedHash}>
       {rootSections.map(
-        ({ content, contentImageFileName, contentImageText, header, subheader, teamMember }) => {
+        ({ content, contentImageFileName, contentImageHeader, contentImageText, header, subheader, teamMember }) => {
           let imagePart;
           if (contentImageFileName) {
             imagePart = (
@@ -53,7 +56,8 @@ const AboutUs = ({ className, frontmatter }) => {
                   className="mx-auto circle rounded-circle"
                   fileName={contentImageFileName}
                 />
-                <p className="text-muted" style={{textAlign: "center"}}>{contentImageText}</p>
+                <h4 style={{textAlign: "center", marginTop: 25, marginBottom: 0}}>{contentImageHeader}</h4>
+                <p className="text-muted" style={{textAlign: "center", marginTop: 0}}>{contentImageText}</p>
               </Grid>
             )
           }

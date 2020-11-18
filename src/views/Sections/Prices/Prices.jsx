@@ -26,7 +26,7 @@ import "./Prices.scss";
 
 const StyledTableCell = withStyles(() => ({
   head: {
-    backgroundColor: "sandybrown",
+    backgroundColor: "#fed136",
     color: "black",
   },
   body: {
@@ -57,6 +57,10 @@ const useStyles = makeStyles({
     textAlign: "center",
     marginBottom: "unset",
   },
+  centerText: {
+    width: "100%",
+    textAlign: "center",
+  },
   pos: {
     marginBottom: 12,
   },
@@ -75,7 +79,7 @@ const useStyles = makeStyles({
   },
   actionButton: {
     width: "100%",
-    background: "sandybrown",
+    background: "#fed136",
   },
   listItem: {
     textAlign: "center",
@@ -83,6 +87,14 @@ const useStyles = makeStyles({
     '&:nth-child(4n-3)': {
       backgroundColor: "lightgrey",
     },
+  },
+  largerText: {
+    fontSize: "1.25rem",
+    fontWeight: "bold",
+  },
+  largerSecondaryText: {
+    fontSize: "1rem",
+    fontWeight: "bold",
   }
 });
 
@@ -114,7 +126,7 @@ const Prices = ({ className, frontmatter }) => {
     return null;
   }
 
-  const { anchor, header: rootHeader, subheader: rootSubHeader, packages, extras, pageBackgroundImage } = frontmatter;
+  const { anchor, header: rootHeader, subheader: rootSubHeader, secondSubheader, packages, extras, pageBackgroundImage, headerClassName } = frontmatter;
 
   const image = imageData.allFile.nodes.find((n) => n.relativePath.includes(pageBackgroundImage));
 
@@ -147,7 +159,8 @@ const Prices = ({ className, frontmatter }) => {
   return (
     <PageSection className={className} id={anchor} style={{ backgroundImage: "url(" + image.publicURL + ")", backgroundSize: "100%"}}>
       <Row>
-        <SectionHeader header={rootHeader} subheader={rootSubHeader} />
+        <SectionHeader header={rootHeader} subheader={rootSubHeader} className={headerClassName}/>
+        <Typography className={classes.centerText}  gutterBottom variant="caption" component="b2">{secondSubheader}</Typography>
       </Row>
       <Row>
         <Grid container spacing={3}>
@@ -161,17 +174,17 @@ const Prices = ({ className, frontmatter }) => {
               <Grid item xs>
                 <Card className={classes.root} variant="outlined">
                   <CardContent className={classes.cardContent}>
-                    <div style={{ backgroundColor: "sandybrown" }}>
+                    <div style={{ backgroundColor: "#fed136" }}>
                       <Typography className={classes.title} gutterBottom variant="caption" component="h2">
                         {packageName}
                       </Typography>
                     </div>
                     <Divider/>
                     <List dense={true} style={{paddingTop: "0px"}}>
-                      {packageContent.map(({ content, subcontent }) => (
+                      {packageContent.map(({ content, subcontent }, index) => (
                         <React.Fragment key={packageName+content}>
                           <ListItem alignItems="center" className={classes.listItem}>
-                            <ListItemText primary={content} secondary={subcontent} />
+                            <ListItemText primary={content} secondary={subcontent} primaryTypographyProps={index === 0 ? {className: classes.largerText} : null} secondaryTypographyProps={index === 0 ? {className: classes.largerSecondaryText} : null}/>
                           </ListItem>
                           <Divider />
                         </React.Fragment>

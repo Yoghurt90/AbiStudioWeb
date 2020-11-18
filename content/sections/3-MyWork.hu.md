@@ -14,7 +14,7 @@ services: [
     serviceActionHref: "Klip Árak",
   },
   {
-    imageFileName: "rick.jpg",
+    imageFileName: "ad_service.png",
     header: "Rendezvény / Reklámfilm",
     serviceActionHref: "Rendezvény Árak",
     content: "Hamarosan"

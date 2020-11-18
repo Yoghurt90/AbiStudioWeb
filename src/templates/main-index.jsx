@@ -39,6 +39,7 @@ export const query = graphql`
           content
           copyright
           header
+          headerClassName
           imageFileName
           jumpToAnchor
           jumpToAnchorText
@@ -49,6 +50,7 @@ export const query = graphql`
             subheader
             contentImageFileName
             contentImageText
+            contentImageHeader
             content
             teamMember {
               header
@@ -58,6 +60,12 @@ export const query = graphql`
           }
           privacyHref
           privacyText
+          privacyContent {
+            paragraphHeader
+            paragraphs {
+              paragraph
+            }
+          }
           services {
             content
             header
@@ -72,6 +80,7 @@ export const query = graphql`
             twitter
           }
           subheader
+          secondSubheader
           termsHref
           termsText
           title
@@ -118,6 +127,10 @@ export const query = graphql`
           clipHeader
           eventHeader
           eventSubHeader
+          questionsData {
+            question
+            answer
+          }
           formData {
             requiredFieldInvalidText
             nameLabel

@@ -50,7 +50,7 @@ const Cinematography = ({ className, frontmatter }) => {
   return (
     <PageSection className={clsx("portfolio-section", className)} style={{ backgroundImage: "url(" + image.publicURL + ")", backgroundSize: "cover"}}> 
       <Row>
-        <SectionHeader header={header} subheader={subheader} subheaderClassName="section-subheading-low-margin"/>
+        <SectionHeader header={header} subheader={subheader} subheaderClassName={clsx("section-subheading-low-margin", "section-subheading-mute-fixed")}/>
       </Row>
       <Row>
         <Typography className={classes.title} gutterBottom variant="caption" component="h2">
