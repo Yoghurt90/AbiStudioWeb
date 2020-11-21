@@ -6,7 +6,7 @@ separatePage: true
 header: "Klip csomagjaink"
 headerClassName: "whiteForeColor"
 subheader: "Életre kel a zene"
-pageBackgroundImage: "clip_background.jpg"
+pageBackgroundImage: "clip_background.png"
 packages: [
   {
     packageName: "Videóklip",

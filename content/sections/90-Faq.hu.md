@@ -12,7 +12,7 @@ questionsData: [
         answer: "Az Alap csomagban kb. 12óra tetszőlegesen választhattok hányra érkezzünk. Bár tájékoztató jelleggel jelölni szoktunk egy időtartamot (10.00-02.00h-ig), de ez nem kell kőbe vésettnek tekinteni. A gyakorlatban ez úgy néz ki, hogy a készülődésre érkezünk (mikor még nem teljes a smink és a frizura) és akkor távozunk, amikor éjjel a menzecske ruhában történő átöltözést követően van kellő mennyiségű és minőségű anyagunk. A rendelkezésre állási időbe nem számít bele a helyszínre töténő oda- és visszautazás."
     },
     {
-        question: "ITT NEM TUDOM MI A KÉRDÉS :D:D:D",
+        question: "Mi az a kreatív fotózás/filmezés?",
         answer: "A kreatív fotózás/filmezés egy rövidített elnevezés, mely lassan önálló jelentéssel bír. Lényegében a fényképész által beállított pózokban történő fotózást nevezzük röviden kreatív fotózásnak. Ezen képek stílusa, minősége, képi világa a fényképész kreativitását tükrözi, ahonnan ered a rövidített elnevezés. Ugyanakkor ezek a kreatív fotók a fényképész képességeinek egyik legfontosabb mérőeszközei. Ugyan ezt jelenti a kreatív filmezés/vidózás is, általában ezt a fényképésszel együttműködve szoktuk megejteni, de kérhető teljesen külön is."
     },
     {

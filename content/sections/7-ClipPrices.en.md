@@ -5,7 +5,7 @@ hideInNavbar: true
 separatePage: true
 header: "Klip csomagjaink"
 subheader: "Gecisokat kerek mindenert mert megtehetem."
-pageBackgroundImage: "clip_background.jpg"
+pageBackgroundImage: "clip_background.png"
 packages: [
   {
     packageName: "Videóklip",
