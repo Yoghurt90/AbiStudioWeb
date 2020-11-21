@@ -175,10 +175,12 @@ const Gallery = ({ className, frontmatter }) => {
     eventSubHeader,
     weddingPlaylistId,
     clipPlaylistId,
+    eventPlaylistId,
   } = frontmatter;
 
   let weddingthumbnails = [];
   let clipthumbnails = [];
+  let eventthumbnails = [];
 
   weddingthumbnails = youtubeData.allYoutubeVideo.nodes.filter(n => n.playlist.id === weddingPlaylistId).map((n) => { 
     if (n.thumbnails.maxres) {
@@ -262,8 +264,52 @@ const Gallery = ({ className, frontmatter }) => {
     }
   });
 
+  eventthumbnails = youtubeData.allYoutubeVideo.nodes.filter(n => n.playlist.id === eventPlaylistId).map((n) => { 
+    if (n.thumbnails.maxres) {
+      return {
+        width: n.thumbnails.maxres.width,
+        height: n.thumbnails.maxres.height,
+        src: n.thumbnails.maxres.url,
+        videosrc: n.id,
+      }
+    } 
+    if (n.thumbnails.standard) {
+      return {
+        width: n.thumbnails.standard.width,
+        height: n.thumbnails.standard.height,
+        src: n.thumbnails.standard.url,
+        videosrc: n.id,
+      }
+    } 
+    if (n.thumbnails.high) {
+      return {
+        width: n.thumbnails.high.width,
+        height: n.thumbnails.high.height,
+        src: n.thumbnails.high.url,
+        videosrc: n.id,
+      }
+    } 
+    if (n.thumbnails.medium) {
+      return {
+        width: n.thumbnails.medium.width,
+        height: n.thumbnails.medium.height,
+        src: n.thumbnails.medium.url,
+        videosrc: n.id,
+      }
+    }
+    return {
+      width: n.thumbnails.default.width,
+      height: n.thumbnails.default.height,
+      src: n.thumbnails.default.url,
+      videosrc: n.id,
+    }
+  });
+
+  while(eventthumbnails.length < 4) { eventthumbnails.push(eventthumbnails[0])}
+
   clipthumbnails = clipthumbnails.reverse();
   weddingthumbnails = weddingthumbnails.reverse();
+  eventthumbnails = eventthumbnails.reverse();
 
   return (
     <PageSection className={clsx(classes.sectionRoot, className)} id={anchor}>
@@ -284,8 +330,6 @@ const Gallery = ({ className, frontmatter }) => {
         index={value} 
         onChangeIndex={handleChangeIndex} 
         disableLazyLoading={true}
-        overscanSlideAfter={2}
-        overscanSlideBefore={2}
         style={{overflow: "visible"}} 
         containerStyle={{overflow: "visible"}} 
         slideStyle={{overflow: "visible"}}>
@@ -307,7 +351,18 @@ const Gallery = ({ className, frontmatter }) => {
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
           <Row style={{marginTop: 50}}>
-            <SectionHeader header={eventHeader} subheader={eventSubHeader}/>
+            <SectionHeader header={eventHeader} />
+          </Row>
+          <Row>
+          <motion.div whileHover={{ scale: 1.1 }} onClick={(e) => openVideo(eventthumbnails[0])}>
+            <img
+              alt=""
+              src={eventthumbnails[0].src}
+              width="100%"
+              className={clsx("cursor-pointer", classes.image)}
+            />
+          </motion.div>
+            {/* <PhotoGallery photos={eventthumbnails} renderImage={imageRenderer} columns={1}/> */}
           </Row>
         </TabPanel>
       </SwipeableViews>

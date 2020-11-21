@@ -46,7 +46,7 @@ module.exports = {
       resolve: "custom-source-youtube",
       options: {
         // Comma-separated list of the YouTube playlist ID(s)
-        playlistId: "PL3XLvoaGQ93sOiAXWY4MnUNW-bKuZNViP,PL3XLvoaGQ93sxgN6CxqocjddGm6b0GpX6",
+        playlistId: "PL3XLvoaGQ93sOiAXWY4MnUNW-bKuZNViP,PL3XLvoaGQ93sxgN6CxqocjddGm6b0GpX6,PL3XLvoaGQ93tFY-1McNUd-qulmpdqZ1q2",
         apiKey: 'AIzaSyD8vCUsEkHYr9IkUTFOR6GjRqvmm6Ngzj8',
         debug: true,
       },

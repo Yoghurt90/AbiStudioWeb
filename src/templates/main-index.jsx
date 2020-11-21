@@ -124,6 +124,7 @@ export const query = graphql`
           }
           weddingPlaylistId
           clipPlaylistId
+          eventPlaylistId
           clipHeader
           eventHeader
           eventSubHeader
