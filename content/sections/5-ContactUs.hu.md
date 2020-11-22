@@ -17,7 +17,7 @@ formData: {
     privacyPolicyMessage: "Az adatokat bizalmasan kezeljük, és nem adjuk ki harmadik félnek semmilyen formában.",
     privacyErrorText: "Az adatkezelés elfogadása kötelező!",
     buttonText: "Küldés",
-    submiturl: "https://formspree.io/f/mwkwbojq",
+    submiturl: "https://formspree.io/f/mnqozkwz",
     packageLabel: "Csomagok",
     packageList: [
         "Alap",
