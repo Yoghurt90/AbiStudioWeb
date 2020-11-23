@@ -31,8 +31,8 @@ module.exports = {
   defaultLang: "hu",
   defaultPage: "Home",
   langTextMap: {
-    en: "English",
+    //en: "English",
     hu: "Magyar",
-    sk: "Slovensky",
+    //sk: "Slovensky",
   },
 };
