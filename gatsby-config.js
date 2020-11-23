@@ -1,6 +1,10 @@
 const path = require("path");
 const { title, keywords, description, author, defaultLang, trackingId } = require("./config/site");
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title,
@@ -47,7 +51,7 @@ module.exports = {
       options: {
         // Comma-separated list of the YouTube playlist ID(s)
         playlistId: "PL3XLvoaGQ93sOiAXWY4MnUNW-bKuZNViP,PL3XLvoaGQ93sxgN6CxqocjddGm6b0GpX6,PL3XLvoaGQ93tFY-1McNUd-qulmpdqZ1q2",
-        apiKey: 'AIzaSyD8vCUsEkHYr9IkUTFOR6GjRqvmm6Ngzj8',
+        apiKey: process.env.YOUTUBE_APIKEY,
         debug: true,
       },
     },
@@ -55,7 +59,7 @@ module.exports = {
     //   resolve: `gatsby-source-youtube-v2`,
     //   options: {
     //     channelId: ['UCSZVBxTQFzR6xZ0WSNlRZSA'],
-    //     apiKey: 'AIzaSyD8vCUsEkHYr9IkUTFOR6GjRqvmm6Ngzj8',
+    //     apiKey: '',
     //     maxVideos: 50 // Defaults to 50
     //   },
     // },
@@ -63,7 +67,7 @@ module.exports = {
     //   resolve: `gatsby-source-vimeo`,
     //   options: {
     //     clientID: '70df0f11ea76b8a22b090cb42972d173ac3a4a27',
-    //     clientSecret: 'znq6dZEjiqg1lP/GFwNi8NMhKuTjq6DhRoxYWkH71TZneFk77FZpoz8sseBqUu/cp335cKDfBUxnU2L72Job2yT1w/GtGt1BuiDzPrNN+CxAgJaUeSrpGPjvkDfS1zaQ',
+    //     clientSecret: '',
     //     userID: 'omgvisuals',
     //   },
     // },
