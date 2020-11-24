@@ -16,7 +16,7 @@ import { useStaticQuery, graphql  } from "gatsby";
 const useStyles = makeStyles((theme) => ({
   heading: {
     fontSize: theme.typography.pxToRem(15),
-    fontWeight: theme.typography.fontWeightRegular,
+    fontWeight: theme.typography.fontWeightBold,
   },
   root: {
     width: "100%",

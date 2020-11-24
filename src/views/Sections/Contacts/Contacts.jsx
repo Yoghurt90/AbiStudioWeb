@@ -30,10 +30,17 @@ const useStyles = makeStyles({
   },
   socialRow: {
     marginTop: 15,
+    justifyContent: "center",
   },
   lowPaddingSection: {
     paddingTop: 25,
     paddingBottom: 25,
+  },
+  noFlexWrap: {
+    flexWrap: "unset",
+    minWidth: 250,
+    marginLeft: 5,
+    marginRight: 0,
   }
 });
 
@@ -52,11 +59,11 @@ const Contacts = ({ className, frontmatter }) => {
         <SectionHeader header={partnersHeader} className="section-heading-smaller-text"/>
       </Row>
       <Row>
-        <Grid container direction="row" justify="space-evenly" alignItems="center">
+        <Grid container spacing={3}>
           {partners.map(({ partnerName, partnerType, partnerIcon, partnerIconLink }) => (
             <Grid item xs key={partnerName}>
               <h4 style={{textAlign: "center"}}>{partnerType}</h4>
-              <Row className="justify-content-md-center">
+              <Row className={clsx("justify-content-md-center", classes.noFlexWrap)}>
                 {partnerIcon === "FB" ? <SocialIcons.Facebook userName={partnerIconLink} /> : null}
                 {partnerIcon === "INSTA" ? <SocialIcons.Instagram userName={partnerIconLink} /> : null}
                 <p className="text-muted" style={{marginTop: "5px"}}>{partnerIconLink}</p>
@@ -69,13 +76,13 @@ const Contacts = ({ className, frontmatter }) => {
         <SectionHeader header={contactsHeader} className="section-heading-large-top-margin"/>
       </Row>
       <Row>
-        <Grid container direction="row" justify="space-evenly" alignItems="center">
+        <Grid container spacing={3} alignItems="center">
           <Grid item xs>
             <Image
               className={classes.logo}
               fileName={contactsLogo}
             />
-            <Row className={clsx("justify-content-md-center", classes.socialRow)}>
+            <Row className={clsx("justify-content-md-center", classes.socialRow, classes.noFlexWrap)}>
               {contacts.map(({ contactIcon, contactUserName }) => (
                 <React.Fragment key={contactIcon}>
                   {contactIcon === "FB" ? <SocialIcons.Facebook userName={contactUserName} /> : null}

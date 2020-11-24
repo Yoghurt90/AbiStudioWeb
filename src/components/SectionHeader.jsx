@@ -9,10 +9,12 @@ import "./SectionHeader.scss";
 
 const useStyles = makeStyles({
   divider: {
-    marginBottom: 25,
+    marginBottom: 55,
     margin: "auto",
-    width: "25%",
-    backgroundColor: "black",
+    width: "33%",
+    border: 0,
+    height: 1,
+    backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))",
   },
 });
 

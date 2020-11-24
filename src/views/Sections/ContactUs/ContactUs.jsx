@@ -76,7 +76,7 @@ const ContactUs = ({ location, className, frontmatter }) => {
           <TextField
             id="Name"
             label={formData.nameLabel}
-            style={{ margin: 8 }}
+            style={{ margin: 12 }}
             placeholder={formData.nameEmptyText}
             fullWidth
             margin="normal"
@@ -89,7 +89,7 @@ const ContactUs = ({ location, className, frontmatter }) => {
             onInvalid={setCustomValidity}
             onInput={clearCustomValidity}
           />
-          <Grid container justify="space-around" style={{ margin: 8 }}>
+          <Grid container justify="space-around" style={{ margin: 12 }}>
             <Grid item xs style={{ marginRight: 8 }}>
               <TextField
                 id="Email"
@@ -128,7 +128,7 @@ const ContactUs = ({ location, className, frontmatter }) => {
               />
             </Grid>
           </Grid>
-          <Grid container justify="space-around" style={{ margin: 8 }}>
+          <Grid container justify="space-around" style={{ margin: 12 }}>
             <Grid item xs style={{ marginRight: 8 }}>
               <MuiPickersUtilsProvider utils={DateFnsUtils}>
                 <KeyboardDatePicker
@@ -166,11 +166,11 @@ const ContactUs = ({ location, className, frontmatter }) => {
               </FormControl>
             </Grid>
           </Grid>
-          <FormHelperText style={{margin: "8px"}}>{formData.messageHelperText}</FormHelperText>
+          <FormHelperText style={{margin: "12px"}}>{formData.messageHelperText}</FormHelperText>
           <TextField
             id="Message"
             label={formData.messageLabel}
-            style={{ margin: 8 }}
+            style={{ margin: 12 }}
             fullWidth
             multiline
             rows={4}
@@ -183,8 +183,7 @@ const ContactUs = ({ location, className, frontmatter }) => {
             name="message"
           />
           <input type="text" name="_gotcha" style={{ display: "none" }} />
-          <Button variant="outlined" type="submit" style={{ margin: 8 }}>{formData.buttonText}</Button>
-          <FormControl style={{marginTop: 4}} required error={privacyErrorText.length > 0}>
+          <FormControl style={{margin: 12}} required error={privacyErrorText.length > 0}>
             <FormControlLabel
               control={
                 <Checkbox
@@ -198,6 +197,7 @@ const ContactUs = ({ location, className, frontmatter }) => {
             />
             <FormHelperText>{privacyErrorText}</FormHelperText>
           </FormControl>
+          <Button variant="outlined" type="submit" style={{ margin: 12}}>{formData.buttonText}</Button>
         </form>
       </Row>
     </PageSection>

@@ -22,7 +22,7 @@ const LanguageSelector = ({ defaultLang, langKey, langTextMap }) => {
           <Link
             key={key}
             to={getBaseUrl(defaultLang, key)}
-            className={clsx("dropdown-item", { active: key === langKey })}
+            className={clsx("dropdown-item", { activeCustom: key === langKey })}
           >
             {langTextMap[key]}
           </Link>

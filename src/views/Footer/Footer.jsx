@@ -8,6 +8,8 @@ import Modal from '@material-ui/core/Modal';
 import { Container, Row, Col } from "react-bootstrap";
 import { Typography } from "@material-ui/core";
 
+import "./Footer.scss";
+
 const useStyles = makeStyles((theme) => ({
   modal: {
     display: 'flex',
@@ -49,7 +51,7 @@ const Footer = ({ frontmatter }) => {
     <footer className="footer py-3">
       <Container>
         <Row className="align-items-center text-center">
-          <Col lg={6} className="text-lg-left">
+          <Col lg={6} className="text-lg-left" style={{color: "white"}}>
             {copyright}
           </Col>
           <Col lg={6} className="text-lg-right">

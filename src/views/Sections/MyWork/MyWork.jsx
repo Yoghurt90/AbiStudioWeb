@@ -43,6 +43,10 @@ const useStyles = makeStyles({
   },
   cardActions: {
     justifyContent: "center",
+  },
+  sectionRoot: {
+    paddingTop: 60,
+    paddingBottom: 60,
   }
 });
 
@@ -62,7 +66,7 @@ const MyWork = ({ className, frontmatter }) => {
   const anchorStrippedHash = anchor.replace("#", "");
 
   return (
-    <PageSection className={className} id={anchorStrippedHash}>
+    <PageSection className={clsx("portfolio-section", classes.sectionRoot, className)} id={anchorStrippedHash}>
       <Row>
         <SectionHeader header={rootHeader} subheader={rootSubHeader} />
       </Row>

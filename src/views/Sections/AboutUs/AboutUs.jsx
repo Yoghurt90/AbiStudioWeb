@@ -15,17 +15,22 @@ import "./AboutUs.scss";
 
 const useStyles = makeStyles({
   title: {
-    fontSize: 27,
+    fontSize: 21,
+    letterSpacing: 2.0,
     textAlign: "left",
   },
   divider: {
-    marginBottom: 25,
+    marginTop: 30,
+    marginBottom: 55,
     margin: "auto",
-    width: "25%",
-    backgroundColor: "black",
+    width: "33%",
+    border: 0,
+    height: 1,
+    backgroundImage: "linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0))",
   },
   sectionRoot: {
-    paddingTop: 75,
+    paddingTop: 60,
+    paddingBottom: 60,
   }
 });
 
@@ -88,7 +93,7 @@ const AboutUs = ({ className, frontmatter }) => {
                 <Grid container spacing={3} justify="center" >
                   {imagePart}
                   <Grid item xs={9}>
-                    <Typography className={classes.title} gutterBottom variant="caption" component="h2">
+                    <Typography className={classes.title} gutterBottom variant="caption" component="p">
                       {content}
                     </Typography>
                   </Grid>
