@@ -95,6 +95,7 @@ export const query = graphql`
           }
           contactsHeader
           contactsPhone
+          contactsSlovakPhone
           contactsMail
           contactsLogo
           contacts {

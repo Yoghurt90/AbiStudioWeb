@@ -30,7 +30,6 @@ const useStyles = makeStyles({
   },
   socialRow: {
     marginTop: 15,
-    justifyContent: "center",
   },
   lowPaddingSection: {
     paddingTop: 25,
@@ -51,7 +50,7 @@ const Contacts = ({ className, frontmatter }) => {
     return null;
   }
 
-  const { partnersHeader, partners, contactsHeader, contactsPhone, contactsMail, contactsLogo, contacts } = frontmatter;
+  const { partnersHeader, partners, contactsHeader, contactsPhone, contactsSlovakPhone, contactsMail, contactsLogo, contacts } = frontmatter;
 
   return (
     <PageSection className={clsx(classes.lowPaddingSection, className)}>
@@ -66,7 +65,9 @@ const Contacts = ({ className, frontmatter }) => {
               <Row className={clsx("justify-content-md-center", classes.noFlexWrap)}>
                 {partnerIcon === "FB" ? <SocialIcons.Facebook userName={partnerIconLink} /> : null}
                 {partnerIcon === "INSTA" ? <SocialIcons.Instagram userName={partnerIconLink} /> : null}
-                <p className="text-muted" style={{marginTop: "5px"}}>{partnerIconLink}</p>
+                <a href={`https://facebook.com/${partnerIconLink}` } target="_blank" rel="noopener noreferrer">
+                  <p className="text-muted" style={{marginTop: "5px"}}>{partnerIconLink}</p>
+                </a>
               </Row>
             </Grid>
           ))}
@@ -78,28 +79,44 @@ const Contacts = ({ className, frontmatter }) => {
       <Row>
         <Grid container spacing={3} alignItems="center">
           <Grid item xs>
-            <Image
-              className={classes.logo}
-              fileName={contactsLogo}
-            />
-            <Row className={clsx("justify-content-md-center", classes.socialRow, classes.noFlexWrap)}>
-              {contacts.map(({ contactIcon, contactUserName }) => (
-                <React.Fragment key={contactIcon}>
-                  {contactIcon === "FB" ? <SocialIcons.Facebook userName={contactUserName} /> : null}
-                  {contactIcon === "INSTA" ? <SocialIcons.Instagram userName={contactUserName} /> : null}
-                </React.Fragment>
-              ))}
-            </Row>
+            <Grid container spacing={3} alignItems="center" justify="center">
+              <Grid item xs>
+                <Image
+                  className={classes.logo}
+                  fileName={contactsLogo}
+                />
+              </Grid>
+              <Grid item xs>
+                {contacts.map(({ contactIcon, contactUserName }) => (
+                  <React.Fragment key={contactIcon}>
+                    <Row className={clsx(classes.socialRow, classes.noFlexWrap)}>
+                      {contactIcon === "FB" ? <SocialIcons.Facebook userName={contactUserName} /> : null}
+                      {contactIcon === "INSTA" ? <SocialIcons.Instagram userName={contactUserName} /> : null}
+                    </Row>
+                  </React.Fragment>
+                ))}
+              </Grid>
+            </Grid>
           </Grid>
           <Grid item xs>
             <List dense={true} className={classes.listRoot}>
-              <ListItem>
+              <ListItem button component="a" href={"tel:" + contactsPhone}>
                 <ListItemIcon>
                   <CircleFAButton iconName="PhoneIcon" />
                 </ListItemIcon>
                 <ListItemText primary={contactsPhone}/>
               </ListItem>
-              <ListItem>
+              <ListItem button component="a" href={"tel:" + contactsSlovakPhone}>
+                <ListItemIcon>
+                  <CircleFAButton iconName="PhoneIcon" />
+                </ListItemIcon>
+                <ListItemText primary={contactsSlovakPhone}/>
+              </ListItem>
+            </List>
+          </Grid>
+          <Grid item xs>
+            <List dense={true} className={classes.listRoot}>
+              <ListItem button component="a" href={"mailto:" + contactsMail}>
                 <ListItemIcon>
                   <CircleFAButton iconName="EnvelopIcon" />
                 </ListItemIcon>

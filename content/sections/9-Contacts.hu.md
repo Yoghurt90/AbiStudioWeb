@@ -22,6 +22,7 @@ partners: [
 ]
 contactsHeader: "Kapcsolat"
 contactsPhone: "+36 30 798 8687"
+contactsSlovakPhone: "+421 917 657 920"
 contactsMail: "mihalypusko@gmail.com"
 contactsLogo: "abi_logo_black.png"
 contacts: [
