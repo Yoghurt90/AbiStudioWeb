@@ -65,7 +65,7 @@ packages: [
         content: "3-5perces highlight kisfilm"
       },
       {
-        content: "15-20perces nagyfilm"
+        content: "15-20perces nagyfilm VAGY 2-3 órás videó az egész napról"
       },
       {
         content: "Full HD minőség"
@@ -109,7 +109,7 @@ packages: [
         content: "5-8perces highlight kisfilm"
       },
       {
-        content: "20-25perces nagyfilm"
+        content: "20-25perces nagyfilm VAGY 2-3 órás videó az egész napról"
       },
       {
         content: "Vágatlan anyag átadása",
