@@ -23,6 +23,9 @@ const useStyles = makeStyles({
     width: "25%",
     backgroundColor: "black",
   },
+  contentRow: {
+    marginLeft: 0,
+  },
 });
 
 const Cinematography = ({ className, frontmatter }) => {
@@ -54,7 +57,7 @@ const Cinematography = ({ className, frontmatter }) => {
       <Row>
         <SectionHeader header={header} subheader={subheader} subheaderClassName={clsx("section-subheading-low-margin", "section-subheading-mute-fixed")} className="section-heading-white"/>
       </Row>
-      <Row>
+      <Row className={classes.contentRow}>
         <Typography className={classes.title} gutterBottom variant="caption" component="h2">
           {content}
         </Typography>

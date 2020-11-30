@@ -16,7 +16,7 @@ packages: [
     packageNameToSelect: "Alap",
     packageContent: [
       {
-        content: "110.000ft"
+        content: "110.000ft - 300eu"
       },
       {
         content: "12óra rendelkezésre állás"
@@ -46,7 +46,7 @@ packages: [
     packageNameToSelect: "Ezüst",
     packageContent: [
       {
-        content: "150.000ft"
+        content: "150.000ft - 400eu"
       },
       {
         content: "Egész napos rendelkezésre állás",
@@ -83,7 +83,7 @@ packages: [
     packageNameToSelect: "Arany",
     packageContent: [
       {
-        content: "200.000ft"
+        content: "200.000ft - 550eu"
       },
       {
         content: "Egész napos rendelkezésre állás",
@@ -116,9 +116,6 @@ packages: [
         subcontent: "(megrendelő által biztositott HDD-n)"
       },
       {
-        content: "4k minőség"
-      },
-      {
         content: "Az elkészült filmek internetes tárhelyről letölthetők és diszdobozos pendriveon is átadásra kerül"
       }
     ]
@@ -132,7 +129,7 @@ packages: [
     packageNameToSelect: "Covid Mini",
     packageContent: [
       {
-        content: "50.000ft"
+        content: "50.000ft - 140eu"
       },
       {
         content: "2-3 óra rendelkezésre állás",
@@ -163,7 +160,7 @@ packages: [
     packageNameToSelect: "Covid Maxi",
     packageContent: [
       {
-        content: "110.000ft"
+        content: "110.000ft - 300eu"
       },
       {
         content: "5-6 óra rendelkezésre állás"
@@ -217,29 +214,18 @@ extras: {
         content: "Drón felvétel + 1 asszisztens"
       },
       {
-        content: "30.000ft"
+        content: "30.000ft - 80eu"
       }
     ],
     rowContent: [
       {
-        content: "4K"
-      },
-      {
-        content: "4k minőség"
-      },
-      {
-        content: "15.000ft"
-      }
-    ],
-    rowContent: [
-      {
-        content: "Vagatlan anyag"
+        content: "Vágatlan anyag"
       },
       {
         content: "Vágatlan anyag (megrendelő által biztositott HDD-n)"
       },
       {
-        content: "10.000ft"
+        content: "10.000ft - 25eu"
       }
     ],
     rowContent: [
@@ -250,7 +236,7 @@ extras: {
         content: "Miskolc 50km-es körzetében ingyen. 50km felett kiutazási díj."
       },
       {
-        content: "60ft/km"
+        content: "60ft/km - 0,2eu/km"
       }
     ]
   ]

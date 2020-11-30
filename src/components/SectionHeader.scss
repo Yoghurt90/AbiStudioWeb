@@ -1,6 +1,6 @@
 .section-header {
   h2.section-heading {
-    font-size: 40px;
+    font-size: 30px;
     margin-top: 0;
     margin-bottom: 15px;
     overflow-wrap: anywhere;
@@ -27,5 +27,15 @@
   }
   h2.section-heading-white {
     color: white;
+  }
+}
+@media (min-width: 992px) {
+  .section-header {
+    h2.section-heading {
+      font-size: 40px;
+      margin-top: 0;
+      margin-bottom: 15px;
+      overflow-wrap: anywhere;
+    }
   }
 }

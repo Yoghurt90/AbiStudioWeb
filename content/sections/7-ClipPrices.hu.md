@@ -17,7 +17,7 @@ packages: [
     packageContent: [
       {
         content: "Ez az ár csak tájékoztató jellegű",
-        subcontent: "40.000ft - 400.000ft",
+        subcontent: "40.000ft - 400.000ft (110eu - 1.100eu)",
       },
       {
         content: "Egy videoklip ára sokmindentől függhet"

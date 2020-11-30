@@ -40,6 +40,9 @@ const useStyles = makeStyles({
     minWidth: 250,
     marginLeft: 5,
     marginRight: 0,
+  },
+  logoContainer: {
+    paddingLeft: 16
   }
 });
 
@@ -79,7 +82,7 @@ const Contacts = ({ className, frontmatter }) => {
       <Row>
         <Grid container spacing={3} alignItems="center">
           <Grid item xs>
-            <Grid container spacing={3} alignItems="center" justify="center">
+            <Grid container spacing={3} alignItems="center" justify="center" className={classes.logoContainer}>
               <Grid item xs>
                 <Image
                   className={classes.logo}
