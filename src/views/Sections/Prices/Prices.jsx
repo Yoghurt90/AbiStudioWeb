@@ -60,12 +60,13 @@ const useStyles = makeStyles({
   centerText: {
     width: "100%",
     textAlign: "center",
+    fontSize: "1.2rem",
   },
   pos: {
     marginBottom: 12,
   },
   table: {
-    minWidth: 400,
+    minWidth: 300,
     marginTop: 10,
   },
   cardLink: {

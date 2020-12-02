@@ -12,10 +12,13 @@ import { useStaticQuery, graphql  } from "gatsby";
 
 const useStyles = makeStyles({
   title: {
-    fontSize: 21,
+    fontSize: 16,
     letterSpacing: 2.0,
     textAlign: "left",
     color: "white",
+    '@media(min-width: 992px)' : {
+      fontSize: 21,
+    }
   },
   divider: {
     marginBottom: 25,

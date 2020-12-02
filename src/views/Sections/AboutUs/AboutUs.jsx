@@ -15,9 +15,12 @@ import "./AboutUs.scss";
 
 const useStyles = makeStyles({
   title: {
-    fontSize: 21,
+    fontSize: 16,
     letterSpacing: 2.0,
     textAlign: "left",
+    '@media(min-width: 992px)' : {
+      fontSize: 21,
+    }
   },
   divider: {
     marginTop: 30,

@@ -65,11 +65,14 @@ const useStyles = makeStyles((theme) => ({
   },
   tabButton: {
     backgroundColor: "#212529",
-    fontSize: 21,
+    fontSize: 12,
     margin: 2,
     color: "white",
     opacity: "unset",
     outline: "unset",
+    '@media(min-width: 992px)' : {
+      fontSize: 21,
+    }
   },
   sectionRoot: {
     paddingTop: 70,
