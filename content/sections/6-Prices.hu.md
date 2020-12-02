@@ -116,6 +116,9 @@ packages: [
         subcontent: "(megrendelő által biztositott HDD-n)"
       },
       {
+        content: "Full HD minőség"
+      },
+      {
         content: "Az elkészült filmek internetes tárhelyről letölthetők és diszdobozos pendriveon is átadásra kerül"
       }
     ]
