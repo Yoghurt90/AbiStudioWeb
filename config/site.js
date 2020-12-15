@@ -27,7 +27,7 @@ module.exports = {
   ],
   description: "abi studio for weddings and music clips",
   author: "Yoghurt",
-  trackingId: "TODO",//UA-119418003-5
+  trackingId: "UA-185604983-1",
   defaultLang: "hu",
   defaultPage: "Home",
   langTextMap: {
