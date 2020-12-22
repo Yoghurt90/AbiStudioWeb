@@ -140,6 +140,7 @@ const ContactUs = ({ location, className, frontmatter }) => {
                   style={{ marginTop: 8 }}
                   format="yyyy/MM/dd"
                   id="datum"
+                  name="selectedDate"
                   label={formData.dateLabel}
                   value={selectedDate}
                   onChange={handleDateChange}
