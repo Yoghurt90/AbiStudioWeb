@@ -16,8 +16,8 @@ partners: [
     {
         partnerName: "ZQ MARI",
         partnerType: "Esküvői meghivó",
-        partnerIcon: "FB",
-        partnerIconLink: "D6niRich6rdBrezn6nik"
+        partnerIcon: "INSTA",
+        partnerIconLink: "breznanik_dani"
     }
 ]
 contactsHeader: "Kapcsolat"

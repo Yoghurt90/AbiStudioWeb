@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     textAlign: "center",
   },
   listRoot: {
-      width: "100%",
+    width: "100%",
   },
   logo: {
     maxWidth: 150,
@@ -58,26 +58,29 @@ const Contacts = ({ className, frontmatter }) => {
   return (
     <PageSection className={clsx(classes.lowPaddingSection, className)}>
       <Row>
-        <SectionHeader header={partnersHeader} className="section-heading-smaller-text"/>
+        <SectionHeader header={partnersHeader} className="section-heading-smaller-text" />
       </Row>
       <Row>
         <Grid container spacing={3}>
           {partners.map(({ partnerName, partnerType, partnerIcon, partnerIconLink }) => (
             <Grid item xs key={partnerName}>
-              <h4 style={{textAlign: "center"}}>{partnerType}</h4>
+              <h4 style={{ textAlign: "center" }}>{partnerType}</h4>
               <Row className={clsx("justify-content-md-center", classes.noFlexWrap)}>
                 {partnerIcon === "FB" ? <SocialIcons.Facebook userName={partnerIconLink} /> : null}
                 {partnerIcon === "INSTA" ? <SocialIcons.Instagram userName={partnerIconLink} /> : null}
-                <a href={`https://facebook.com/${partnerIconLink}` } target="_blank" rel="noopener noreferrer">
-                  <p className="text-muted" style={{marginTop: "5px"}}>{partnerIconLink}</p>
-                </a>
+                {partnerIcon === "FB" ? <a href={`https://facebook.com/${partnerIconLink}`} target="_blank" rel="noopener noreferrer">
+                  <p className="text-muted" style={{ marginTop: "5px" }}>{partnerIconLink}</p>
+                </a> : null}
+                {partnerIcon === "INSTA" ? <a href={`https://www.instagram.com/${partnerIconLink}`} target="_blank" rel="noopener noreferrer">
+                  <p className="text-muted" style={{ marginTop: "5px" }}>{partnerIconLink}</p>
+                </a> : null}
               </Row>
             </Grid>
           ))}
         </Grid>
       </Row>
       <Row>
-        <SectionHeader header={contactsHeader} className="section-heading-large-top-margin"/>
+        <SectionHeader header={contactsHeader} className="section-heading-large-top-margin" />
       </Row>
       <Row>
         <Grid container spacing={3} alignItems="center">
@@ -107,13 +110,13 @@ const Contacts = ({ className, frontmatter }) => {
                 <ListItemIcon>
                   <CircleFAButton iconName="PhoneIcon" />
                 </ListItemIcon>
-                <ListItemText primary={contactsPhone}/>
+                <ListItemText primary={contactsPhone} />
               </ListItem>
               <ListItem button component="a" href={"tel:" + contactsSlovakPhone}>
                 <ListItemIcon>
                   <CircleFAButton iconName="PhoneIcon" />
                 </ListItemIcon>
-                <ListItemText primary={contactsSlovakPhone}/>
+                <ListItemText primary={contactsSlovakPhone} />
               </ListItem>
             </List>
           </Grid>
@@ -123,7 +126,7 @@ const Contacts = ({ className, frontmatter }) => {
                 <ListItemIcon>
                   <CircleFAButton iconName="EnvelopIcon" />
                 </ListItemIcon>
-                <ListItemText primary={contactsMail}/>
+                <ListItemText primary={contactsMail} />
               </ListItem>
             </List>
           </Grid>
