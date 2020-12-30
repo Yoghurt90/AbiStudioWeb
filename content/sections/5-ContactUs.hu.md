@@ -26,7 +26,7 @@ formData: {
         "Covid Mini", 
         "Covid Maxi",
         "Videóklip",
-        "Rendeveny/Reklamfil",
+        "Rendeveny/Reklamfilm",
     ]
 }
 ---

@@ -1,30 +1,31 @@
----
+﻿---
 anchor: "Contact"
-separatePage: true
-header: "Let's Get In Touch!"
+separatePage: true #NE FORDITSD
+header: "Get a quote"
 formData: {
-    requiredFieldInvalidText: "Tolts ki",
-    nameLabel: "Nev",
+    requiredFieldInvalidText: "Fill it out",
+    nameLabel: "Name",
     nameEmptyText: "John Doe",
     emailLabel: "Email",
     emailEmptyText: "dummy@example.com",
-    phoneLabel: "Telefon",
+    phoneLabel: "Phone",
     phoneEmptyText: "+36/70-123-4567",
-    dateLabel: "Datum",
-    messageLabel: "Uzenet",
+    dateLabel: "Date",
+    messageLabel: "Message",
     messageEmptyText: "",
-    messageHelperText: "Kérlek írjátok ide az eskövő fontosabb részleteit, helyszínét, esetleg ha van valami különleges kérésetek.",
-    privacyPolicyMessage: "Az adatokat bizalmasan kezeljük, és nem adjuk ki harmadik feélnek semmilyen formában.",
-    privacyErrorText: "Az adatkezelés elfogadása kötelező!",
-    buttonText: "Kuldes",
-    submiturl: "https://formspree.io/f/mnqozkwz",
-    packageLabel: "Csomagok",
+    messageHelperText: "Please write here the most important details of yout wedding",
+    privacyPolicyMessage: "The data will not be disclosed to third parties in any form",
+    privacyErrorText: "Acceptance is required!",
+    buttonText: "Send",
+    submiturl: "https://formspree.io/f/mnqozkwz", #NE FORDITSD
+    packageLabel: "Packages",
     packageList: [
-        "Alap",
-        "Ezüst",
-        "Arany",
-        "Covid Mini", 
-        "Covid Maxi"
-    ]
-}
+        "Basic",
+        "Silver",
+        "Golden",
+        "Covid Mini",
+        "Covid Maxi",
+        "Music video", #UGYANAZ LEGYEN MINT A 7-ClipPrices fileban a packagenametoselect
+      ],
+  }
 ---

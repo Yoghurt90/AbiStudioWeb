@@ -1,47 +1,31 @@
----
-anchor: "#Portfolio"
+﻿---
+anchor: "#About us" #A kettoskereszt maradjon meg az elejen
 sections: [
-  {
-    header: "Rolunk",
-    subheader: "",
-    contentImageFileName: "misi.jpg",
-    content: "Pusko Miály vagyok az ABI studio alapítója, 2011 óta foglalkozom filmkészítéssel. Az esküvők
-világába 2016ban csöppentem bele, azóta pedig szerelemmé vált. Szenvedélyem a filmkészítés,
-szeretek történeteket elmesélni és imádom kihasználni a film adta lehetőségeket. A letisztult
-esztétikában hiszek, nem a közhelyes, effektekkel teletűzdelt filmekben. Szerintem úgy lehet a
-legőszintébb filmet, érzéseket átadni ha ezt teljesen észrevétlenül készítjük, épp ezért csendben
-és szinte észrevétlenül dolgozunk a háttérben.",
-    teamMember: [
-      {
-        imageFileName: "team/mate.jpg",
-        header: "Szakos Máté",
-        subheader: "Operatőr",
-        social: {
-          facebook: "szakos.mate"
-        }
-      },
-      {
-        imageFileName: "team/istvan.jpg",
-        header: "Farkas István",
-        subheader: "Fotós, Operatőr",
-        social: {
-          facebook: "istvan.farkas.180"
-        }
-      },
-      {
-        imageFileName: "team/dani.jpg",
-        header: "Breznanik R. Dániel",
-        subheader: "Vágó, Grafikus",
-        social: {
-          facebook: "100009459593242"
-        }
-      },
-    ]
-  },
-  {
-    header: "Cinematográfia",
-    subheader: "modern esküvői videó",
-    content: "Az esküvői cinematográfia teljesen eltér a régi esküvői videó stílustól. Sokkal inkább az érzelmekre helyezi a hangsúlyt. Célunk a nap legfontosabb pillanatait megörökíteni, amiben egy-egy elkapott érzelmes pillanat sokkal többet ad vissza, mint egy hosszú vágatlan videó. Végül ezekből a felvételekből válogatjuk ki az esküvőtökön készült legjobb pillanatokat, beszédeket, amiből egy mozifilm élményű filmet készítünk. DSLR/MILC Gépeket használunk, amely látványvilágában egy mozifilmhez hasonlítható. Az általunk használt különböző speciális kameramozgatók pedig csak tovább fokozzák ezt az élményt."
-  }
-]
+    {
+      header: "About us",
+      subheader: "We make authentic films full of emotions",
+      contentImageFileName: "misi.jpg", #NE FORDITSD
+      content:
+        "My name is Mihály Pusko, I am the founder of ABI studio, and I have been making films since 2011. I met the other half of my team through my work, and I’ve known Dani since I was a kid. I entered into the world of weddings in 2016 and have been in love with it ever since. My passion is filmmaking as I love telling stories and really enjoy the visual impact that making films has on setting a scene. I think that the most effective way to make sincere films is when we work quietly in the background, unnoticed, to portray the true emotions of people and their interactions with others. This is why I believe in refined aesthetics, and not in mundane special effects, when creating the final result.",
+      contentImageText: "Director, Cameraman, Editor",
+      contentImageHeader: "Pusko Mihály",
+      teamMember: [
+          {
+            imageFileName: "team/mate.jpg", #NE FORDITSD
+            header: "Szakos Máté",
+            subheader: "Cameraman",
+          },
+          {
+            imageFileName: "team/istvan.jpg", #NE FORDITSD
+            header: "Farkas István",
+            subheader: "Photographer, Cameraman",
+          },
+          {
+            imageFileName: "team/dani.jpg", #NE FORDITSD
+            header: "Breznanik R. Dániel",
+            subheader: "Editor, Graphic",
+          },
+        ],
+    },
+  ]
 ---

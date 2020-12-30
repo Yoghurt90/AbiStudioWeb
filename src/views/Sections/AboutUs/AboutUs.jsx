@@ -18,7 +18,7 @@ const useStyles = makeStyles({
     fontSize: 16,
     letterSpacing: 2.0,
     textAlign: "left",
-    '@media(min-width: 992px)' : {
+    '@media(min-width: 992px)': {
       fontSize: 21,
     }
   },
@@ -46,7 +46,7 @@ const AboutUs = ({ className, frontmatter }) => {
 
   const { anchor, sections: rootSections } = frontmatter;
 
-  const anchorStrippedHash = anchor.replace("#", "");
+  const anchorStrippedHash = anchor.replace("#", "").replace(" ", "_");
 
   const headerClassName = "section-heading-large-top-margin";
 
@@ -59,13 +59,13 @@ const AboutUs = ({ className, frontmatter }) => {
           let imagePart;
           if (contentImageFileName) {
             imagePart = (
-              <Grid item xs={3} style={{minWidth:225}}>
+              <Grid item xs={3} style={{ minWidth: 225 }}>
                 <Image
                   className="mx-auto circle rounded-circle"
                   fileName={contentImageFileName}
                 />
-                <h4 style={{textAlign: "center", marginTop: 25, marginBottom: 0}}>{contentImageHeader}</h4>
-                <p className="text-muted" style={{textAlign: "center", marginTop: 0}}>{contentImageText}</p>
+                <h4 style={{ textAlign: "center", marginTop: 25, marginBottom: 0 }}>{contentImageHeader}</h4>
+                <p className="text-muted" style={{ textAlign: "center", marginTop: 0 }}>{contentImageText}</p>
               </Grid>
             )
           }
@@ -74,8 +74,8 @@ const AboutUs = ({ className, frontmatter }) => {
           if (teamMember) {
             teamMemberPart = (
               <React.Fragment key={teamMember}>
-                <Divider className={classes.divider} variant="middle"/>
-                <Row style={{marginTop: "20px"}}>
+                <Divider className={classes.divider} variant="middle" />
+                <Row style={{ marginTop: "20px" }}>
                   {teamMember.map(({ memberHeader, ...tmProps }) => (
                     <Col sm={4} key={header}>
                       <TeamMember header={memberHeader} {...tmProps} />

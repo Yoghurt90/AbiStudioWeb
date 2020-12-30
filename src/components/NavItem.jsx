@@ -2,15 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 import clsx from "clsx";
 
-import { Nav, NavDropdown  } from "react-bootstrap";
-import {AnchorLink } from "gatsby-plugin-anchor-links";
+import { Nav, NavDropdown } from "react-bootstrap";
+import { AnchorLink } from "gatsby-plugin-anchor-links";
 
 import "./NavItem.scss";
 
-const NavItem = ({ to, anchors, langKey, defaultLang, children }) => {  
+const NavItem = ({ to, anchors, langKey, defaultLang, children }) => {
   if (!to) {
     return null;
   }
+  const toSpaceReplaced = to.replace(" ", "_");
   const langKeyPrefix = langKey === defaultLang ? "" : (`/${langKey}`);
   const toStrippedHash = to.replace("#", "");
   if (anchors && anchors.length > 0) {
@@ -18,14 +19,14 @@ const NavItem = ({ to, anchors, langKey, defaultLang, children }) => {
       <NavDropdown title={toStrippedHash} id="nav-dropdown">
         {anchors.map((dropDownAnchorItem) => (
           // <NavDropdown.Item >
-            <AnchorLink 
-              className={clsx("dropdown-item")}
-              activeClass="active"
-              key={dropDownAnchorItem}
-              to={`${langKeyPrefix}/${dropDownAnchorItem}`}
-            >
-              {children || dropDownAnchorItem}
-            </AnchorLink>
+          <AnchorLink
+            className={clsx("dropdown-item")}
+            activeClass="active"
+            key={dropDownAnchorItem}
+            to={`${langKeyPrefix}/${dropDownAnchorItem}`}
+          >
+            {children || dropDownAnchorItem}
+          </AnchorLink>
           // </NavDropdown.Item>
         ))}
       </NavDropdown>
@@ -33,10 +34,10 @@ const NavItem = ({ to, anchors, langKey, defaultLang, children }) => {
   }
   return (
     <Nav.Item>
-      <AnchorLink 
+      <AnchorLink
         className="nav-link cursor-pointer"
         activeClass="active"
-        to={`${langKeyPrefix}/${to}`}
+        to={`${langKeyPrefix}/${toSpaceReplaced}`}
       >
         {children || toStrippedHash}
       </AnchorLink>

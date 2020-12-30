@@ -1,6 +1,6 @@
----
-header: "Cinematográfia"
-subheader: "modern esküvői videó"
-pageBackgroundImage: "cinematografia.jpg"
-content: "Az esküvői cinematográfia teljesen eltér a régi esküvői videó stílustól. Sokkal inkább az érzelmekre helyezi a hangsúlyt. Célunk a nap legfontosabb pillanatait megörökíteni, amiben egy-egy elkapott érzelmes pillanat sokkal többet ad vissza, mint egy hosszú vágatlan videó. Végül ezekből a felvételekből válogatjuk ki az esküvőtökön készült legjobb pillanatokat, beszédeket, amiből egy mozifilm élményű filmet készítünk. DSLR/MILC Gépeket használunk, amely látványvilágában egy mozifilmhez hasonlítható. Az általunk használt különböző speciális kameramozgatók pedig csak tovább fokozzák ezt az élményt."
+﻿---
+header: "Cinematography"
+subheader: "Modern wedding film"
+pageBackgroundImage: "cinematografia.jpg" #NE FORDITSD
+content: "Wedding cinematography is completely different from the old wedding video style. It puts the emphasis more on emotions. Our goal is to capture the most important moments of the day, in which a captured emotional moment gives back much more than a long uncut video. Finally, we select from these recordings the best moments and speeches made at your wedding and make a film with a cinematic experience. We use DSLR / MILC devices, which are similar to a movie in the visual world, as well as various special camera stabilizers to further enhance the experience."
 ---
