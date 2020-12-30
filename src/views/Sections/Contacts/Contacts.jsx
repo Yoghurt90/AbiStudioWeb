@@ -55,30 +55,39 @@ const Contacts = ({ className, frontmatter }) => {
 
   const { partnersHeader, partners, contactsHeader, contactsPhone, contactsSlovakPhone, contactsMail, contactsLogo, contacts } = frontmatter;
 
+  let partnersPart;
+  if (partnersHeader !== "") {
+    partnersPart = (
+      <fragment>
+        <Row>
+          <SectionHeader header={partnersHeader} className="section-heading-smaller-text" />
+        </Row>
+        <Row>
+          <Grid container spacing={3}>
+            {partners.map(({ partnerName, partnerType, partnerIcon, partnerIconLink }) => (
+              <Grid item xs key={partnerName}>
+                <h4 style={{ textAlign: "center" }}>{partnerType}</h4>
+                <Row className={clsx("justify-content-md-center", classes.noFlexWrap)}>
+                  {partnerIcon === "FB" ? <SocialIcons.Facebook userName={partnerIconLink} /> : null}
+                  {partnerIcon === "INSTA" ? <SocialIcons.Instagram userName={partnerIconLink} /> : null}
+                  {partnerIcon === "FB" ? <a href={`https://facebook.com/${partnerIconLink}`} target="_blank" rel="noopener noreferrer">
+                    <p className="text-muted" style={{ marginTop: "5px" }}>{partnerIconLink}</p>
+                  </a> : null}
+                  {partnerIcon === "INSTA" ? <a href={`https://www.instagram.com/${partnerIconLink}`} target="_blank" rel="noopener noreferrer">
+                    <p className="text-muted" style={{ marginTop: "5px" }}>{partnerIconLink}</p>
+                  </a> : null}
+                </Row>
+              </Grid>
+            ))}
+          </Grid>
+        </Row>
+      </fragment>
+    );
+  }
+
   return (
     <PageSection className={clsx(classes.lowPaddingSection, className)}>
-      <Row>
-        <SectionHeader header={partnersHeader} className="section-heading-smaller-text" />
-      </Row>
-      <Row>
-        <Grid container spacing={3}>
-          {partners.map(({ partnerName, partnerType, partnerIcon, partnerIconLink }) => (
-            <Grid item xs key={partnerName}>
-              <h4 style={{ textAlign: "center" }}>{partnerType}</h4>
-              <Row className={clsx("justify-content-md-center", classes.noFlexWrap)}>
-                {partnerIcon === "FB" ? <SocialIcons.Facebook userName={partnerIconLink} /> : null}
-                {partnerIcon === "INSTA" ? <SocialIcons.Instagram userName={partnerIconLink} /> : null}
-                {partnerIcon === "FB" ? <a href={`https://facebook.com/${partnerIconLink}`} target="_blank" rel="noopener noreferrer">
-                  <p className="text-muted" style={{ marginTop: "5px" }}>{partnerIconLink}</p>
-                </a> : null}
-                {partnerIcon === "INSTA" ? <a href={`https://www.instagram.com/${partnerIconLink}`} target="_blank" rel="noopener noreferrer">
-                  <p className="text-muted" style={{ marginTop: "5px" }}>{partnerIconLink}</p>
-                </a> : null}
-              </Row>
-            </Grid>
-          ))}
-        </Grid>
-      </Row>
+      {partnersPart}
       <Row>
         <SectionHeader header={contactsHeader} className="section-heading-large-top-margin" />
       </Row>

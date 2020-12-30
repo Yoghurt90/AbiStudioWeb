@@ -1,26 +1,8 @@
 ---
-partnersHeader: "Partnerek akikkel szivesen dolgozunk"
+partnersHeader: ""
 partners: [
-    {
-      partnerName: "XY BELA", #NE FORDITSD
-      partnerType: "Esküvői fotósok",
-      partnerIcon: "FB", #NE FORDITSD
-      partnerIconLink: "hollofoto", #NE FORDITSD
-    },
-    {
-      partnerName: "XY BELA1", #NE FORDITSD
-      partnerType: "Esküvői torta",
-      partnerIcon: "FB", #NE FORDITSD
-      partnerIconLink: "liatorta", #NE FORDITSD
-    },
-    {
-      partnerName: "ZQ MARI", #NE FORDITSD
-      partnerType: "Esküvői meghivó",
-      partnerIcon: "INSTA",
-      partnerIconLink: "breznanik_dani"
-    },
   ]
-contactsHeader: "Kapcsolat"
+contactsHeader: "Contacts"
 contactsPhone: "+36 30 798 8687"
 contactsSlovakPhone: "+421 917 657 920"
 contactsMail: "mihalypusko@gmail.com"
