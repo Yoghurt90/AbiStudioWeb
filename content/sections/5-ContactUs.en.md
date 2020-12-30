@@ -23,8 +23,6 @@ formData: {
         "Basic",
         "Silver",
         "Golden",
-        "Covid Mini",
-        "Covid Maxi",
         "Music video", #UGYANAZ LEGYEN MINT A 7-ClipPrices fileban a packagenametoselect
       ],
   }
