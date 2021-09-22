@@ -16,7 +16,7 @@ packages: [
     packageNameToSelect: "Alap",
     packageContent: [
       {
-        content: "110.000ft - 300eu"
+        content: "150.000ft - 420eu"
       },
       {
         content: "12óra rendelkezésre állás"
@@ -46,7 +46,7 @@ packages: [
     packageNameToSelect: "Ezüst",
     packageContent: [
       {
-        content: "150.000ft - 400eu"
+        content: "180.000ft - 510eu"
       },
       {
         content: "Egész napos rendelkezésre állás",
@@ -83,7 +83,7 @@ packages: [
     packageNameToSelect: "Arany",
     packageContent: [
       {
-        content: "200.000ft - 550eu"
+        content: "250.000ft - 700eu"
       },
       {
         content: "Egész napos rendelkezésre állás",
@@ -217,7 +217,7 @@ extras: {
         content: "Drón felvétel + 1 asszisztens"
       },
       {
-        content: "30.000ft - 80eu"
+        content: "50.000ft - 140eu"
       }
     ],
     rowContent: [
@@ -236,7 +236,7 @@ extras: {
         content: "Utazás"
       },
       {
-        content: "Miskolc 50km-es körzetében ingyen. 50km felett kiutazási díj."
+        content: "Miskolc 25km-es körzetében ingyen. 25km felett kiutazási díj."
       },
       {
         content: "60ft/km - 0,2eu/km"
